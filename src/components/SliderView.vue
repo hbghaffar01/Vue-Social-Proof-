@@ -27,7 +27,8 @@ export default {
       options1: {
         dots: false,
         fade: true,
-        navButtons: false },
+        navButtons: false
+         },
 
 
       options2: {
@@ -35,7 +36,7 @@ export default {
         centerMode: true,
         dots: false,
         navButtons: false,
-        slidesToShow: 3,
+        slidesToShow: 2,
         autoplaySpeed: 3000,
         changeDelay: 500,
         pauseOnHover: false,
@@ -43,14 +44,19 @@ export default {
         {
           breakpoint: 600,
           settings: {
-            slidesToShow: 5 } },
+            slidesToShow: 5
+            }
+          },
 
 
 
         {
           breakpoint: 1000,
           settings: {
-            navButtons: false } }] },
+            navButtons: false
+             } 
+          }] 
+        },
 
 
 
