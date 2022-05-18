@@ -81,7 +81,7 @@ export default {
     left: 3rem;
     margin-top: -9rem;
     z-index: 2 !important;
-    background-image: url(../assets/comma.svg);
+    background-image: url(@/assets/comma.svg);
     background-repeat: no-repeat;
 }
 .worker-text::after {
@@ -92,7 +92,7 @@ export default {
     right: -50px;
     margin-top: 0rem;
     z-index: 4 !important;
-    background-image: url(../assets/circle.svg);
+    background-image: url(@/assets/circle.svg);
     background-repeat: no-repeat;
 }
 .worker-text{

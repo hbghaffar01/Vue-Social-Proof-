@@ -2,8 +2,8 @@
   <div class="home">
     <main>
     <div class="color">
-    <NavbarView />
-    <BannerView />
+      <NavbarView />
+      <BannerView />
     </div>
     <SponsorshipView />
     <CreativityView />
@@ -14,23 +14,24 @@
     <FourView />
     <PartnerView />
     <FooterView />
+    
     </main>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import NavbarView from '@/components/NavbarView.vue'
-import BannerView from '@/components/BannerView.vue'
-import SponsorshipView from '@/components/SponsorshipView.vue'
-import CreativityView from '@/components/CreativityView.vue'
-import EarnView from '../components/EarnView.vue'
-import WorkerView from '../components/WorkerView.vue'
-import SliderView from '@/components/SliderView.vue'
-import FaqView from '@/components/FaqView.vue'
-import FourView from '@/components/FourView.vue'
-import PartnerView from '../components/PartnerView.vue'
-import FooterView from '@/components/FooterView.vue'
+import NavbarView from '@/components/Navbar/NavbarView.vue'
+import BannerView from '@/components/Main body/BannerView.vue'
+import SponsorshipView from '@/components/Main body/SponsorshipView.vue'
+import CreativityView from '@/components/Main body/CreativityView.vue'
+import EarnView from '@/components/Main body/EarnView.vue'
+import WorkerView from '@/components/Main body/WorkerView.vue'
+import SliderView from '@/components/Main body/SliderView.vue'
+import FaqView from '@/components/Main body/FaqView.vue'
+import FourView from '@/components/Main body/FourView.vue'
+import PartnerView from '@/components/Main body/PartnerView.vue'
+import FooterView from '@/components/footer/FooterView.vue'
 
 export default {
   name: 'HomeView',
