@@ -14,7 +14,14 @@
                       <p>Get connected with premium brands and advertisers for consistent sponsorship opportunities. Enroll, create and share the sponsored content across your social media accounts in exchange for a high paying CPM compensation!</p>
                   </div>
                   <div class="sponsor-button">
-                      <a href="#">Sign Up Now For Free</a>
+                      
+                      <router-link to="authenticate"
+                        class="nav-item"
+                        exact
+                        >
+                        <a href="#">Sign Up Now For Free</a>
+                        </router-link>
+                      
                   </div>
 
                   <div class="sponsor-links" data-aos="fade-left" data-aos-duration="1000" data-aos-once="true">

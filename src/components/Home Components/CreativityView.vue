@@ -10,7 +10,14 @@
                       <p>Monetize your creativity and influence by promoting things you love and stand behind! Don’t sell your influence short with flat pricing posts; With Social Proof, the better your content performs, the more you earn!</p>
                   </div>
                   <div class="creativity-button">
-                      <a href="#">Sounds Good, I Want to Join</a>
+
+                      <router-link to="authenticate"
+                        class="nav-item"
+                        exact
+                        >
+                        <a href="#">Sounds Good, I Want to Join</a>
+                        </router-link>
+                      
                   </div>
               </div>
 

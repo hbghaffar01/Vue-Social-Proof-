@@ -3,7 +3,7 @@ import HomeView from '../views/HomeView.vue'
 
 const routes = [
   {
-    path: '/',
+    path: '/home',
     name: 'home',
     component: HomeView
   },
@@ -18,8 +18,8 @@ const routes = [
   {
     path: '/authenticate',
     name: 'authenticate',
-    component: () => import('../views/AuthenticationView.vue')
-  }
+    component: () => import('@/views/AuthenticationView.vue')
+  },
 ]
 
 const router = createRouter({

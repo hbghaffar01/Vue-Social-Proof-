@@ -16,16 +16,37 @@
         
         <li class="nav-item me-1">
           <a class="nav-link" aria-current="page" href="#">	
-           Influencers</a>
+           <router-link to="home"
+                        class="nav-item"
+                        exact
+                        >
+                        Influencers
+                        </router-link>           
+           </a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#">Advertisers</a>
+          <a class="nav-link" href="#">
+            <router-link to="about"
+                        class="nav-item"
+                        exact
+                        >
+                        Advertisers
+                        </router-link>
+            </a>
         </li>
       </ul>
       <div class="d-flex get-start">
         <button class="btn started" type="submit">Get Started</button>
-        <button class="btn signIn" type="submit">Sign In</button>
+        
+          <router-link to="authenticate"
+                        class="nav-item"
+                        exact
+                        >
+                        <button class="btn signIn" type="submit">Sign In</button>
+                        </router-link>
+          
+          
       </div>
     </div>
   </div>
@@ -79,9 +100,11 @@ export default {
     width: 100%;
     z-index: 100;
     position: fixed;
-    
     .navbar-brand {
       margin-right: .5 !important;
+      img{
+        margin-left: 12px;
+      }
     }
 
     .navbar-light{
@@ -90,11 +113,10 @@ export default {
     }
     a {
       text-decoration: none;
-      font-weight: 100;
-      padding: 25px 27px 20px 27px;
-    
+      padding: 25px 20px 20px 20px;
+      color: #010000;
       &:hover {
-      color: unset !important;
+      opacity: .75;
     }
     }
 
@@ -109,13 +131,16 @@ export default {
   .started{
     box-shadow: none;
     color: #010000;
+    &:hover{
+      opacity: .5;
+    }
   }
   .signIn {
     background: #fff;
     width: 130px;
     height: 40px;
     border-radius: 0 !important;
-    color: #2BA8F5 !important;;
+    color: #2BA8F5 !important;
     box-shadow: none;
   }
 }
@@ -136,7 +161,7 @@ button {
   .header nav a{
     text-decoration: none;
     font-weight: 100;
-    padding: 25px 7px 20px 55px;
+    padding: 25px 20px 20px 20px;
   }
 
 }
@@ -163,6 +188,7 @@ button {
     border-radius: 0 !important;
     color: #fff !important;
     box-shadow: none;
+    margin-right: 2rem;
 }
   .navbar-light .navbar-toggler {
       color: unset;
@@ -184,8 +210,9 @@ ul{
   padding-left: 2.5rem;
 }
 .get-start .started{
-  margin-bottom: 1.5rem;
   padding: 40px;
+  margin-right: 3rem;
+  font-size: 100;
 }
 
 
@@ -271,11 +298,20 @@ button {
   .header nav a{
     text-decoration: none;
     font-weight: 100;
-    padding: 25px 0;
+    padding: 13px 0;
+  }
+  button{
+    margin: -30px 10px 20px 10px;
   }
   .get-start{
     
     padding-left: 0rem;
+  }
+  .get-start .started{
+    margin-right: 5px;
+  }
+  .header .signIn{
+    margin-right: 0rem;
   }
 
 }

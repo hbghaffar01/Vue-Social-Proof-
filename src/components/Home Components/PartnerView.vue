@@ -8,7 +8,14 @@
           </div>
           <div class="partner-btn" data-aos="fade-up" data-aos-duration="1100" data-aos-once="true">
               <div class="button">
-                  <a href="#">Create A Free Profile</a>
+
+                  <router-link to="authenticate"
+                        class="nav-item"
+                        exact
+                        >
+                        <a href="#">Create A Free Profile</a>
+                        </router-link>
+             
               </div>
           </div>
       </div>

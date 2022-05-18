@@ -14,7 +14,14 @@
                       <p>Our programmatic platform facilitates campaigns autonomously. Resulting in no back and forth client communication and no costly operating or manager fees eating away at your earnings!</p>
                   </div>
                   <div class="earn-button">
-                      <a href="#">Create an Account and Start Earning</a>
+
+                      <router-link to="authenticate"
+                        class="nav-item"
+                        exact
+                        >
+                        <a href="#">Create an Account and Start Earning</a>
+                        </router-link>
+                      
                   </div>
               </div>
           </div>
