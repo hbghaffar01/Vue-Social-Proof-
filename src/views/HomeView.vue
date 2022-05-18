@@ -21,17 +21,17 @@
 
 <script>
 // @ is an alias to /src
-import NavbarView from '@/components/Navbar/NavbarView.vue'
-import BannerView from '@/components/Main body/BannerView.vue'
-import SponsorshipView from '@/components/Main body/SponsorshipView.vue'
-import CreativityView from '@/components/Main body/CreativityView.vue'
-import EarnView from '@/components/Main body/EarnView.vue'
-import WorkerView from '@/components/Main body/WorkerView.vue'
-import SliderView from '@/components/Main body/SliderView.vue'
-import FaqView from '@/components/Main body/FaqView.vue'
-import FourView from '@/components/Main body/FourView.vue'
-import PartnerView from '@/components/Main body/PartnerView.vue'
-import FooterView from '@/components/footer/FooterView.vue'
+import NavbarView from '@/components/Home Components/NavbarView.vue'
+import BannerView from '@/components/Home Components/BannerView.vue'
+import SponsorshipView from '@/components/Home Components/SponsorshipView.vue'
+import CreativityView from '@/components/Home Components/CreativityView.vue'
+import EarnView from '@/components/Home Components/EarnView.vue'
+import WorkerView from '@/components/Home Components/WorkerView.vue'
+import SliderView from '@/components/Home Components/SliderView.vue'
+import FaqView from '@/components/Home Components/FaqView.vue'
+import FourView from '@/components/Home Components/FourView.vue'
+import PartnerView from '@/components/Home Components/PartnerView.vue'
+import FooterView from '@/components/Home Components/FooterView.vue'
 
 export default {
   name: 'HomeView',

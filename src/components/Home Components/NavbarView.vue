@@ -106,11 +106,10 @@ export default {
       }
     }
   }
-
-
-
-
-
+  .started{
+    box-shadow: none;
+    color: #010000;
+  }
   .signIn {
     background: #fff;
     width: 130px;
