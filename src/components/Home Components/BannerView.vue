@@ -10,7 +10,14 @@
              the most applicable brands for your audience.
           </p>
           <div class="banner-button">
-          <button class="btn freeProfile" type="submit">Create A Free Profile</button>
+
+              <router-link to="authenticate"
+                        class="nav-item"
+                        exact
+                        >
+                        <button class="btn freeProfile" type="submit">Create A Free Profile</button>
+                        </router-link>
+          
           </div>
       </div>
       </div>

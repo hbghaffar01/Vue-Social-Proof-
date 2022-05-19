@@ -37,7 +37,13 @@
         </li>
       </ul>
       <div class="d-flex get-start">
-        <button class="btn started" type="submit">Get Started</button>
+
+        <router-link to="started"
+                        class="nav-item"
+                        exact
+                        >
+                        <button class="btn started" type="submit">Get Started</button>
+                        </router-link>        
         
           <router-link to="authenticate"
                         class="nav-item"

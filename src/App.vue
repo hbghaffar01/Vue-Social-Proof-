@@ -1,8 +1,9 @@
 <template>
   <router-view/>
   <nav>
-    <router-link to="/home">Home</router-link> |
-    <router-link to="/about">Influencer</router-link>
+    <router-link to="/home"></router-link> |
+    <router-link to="/about"></router-link>
+    <router-link to="/started"></router-link>
     <router-link to="/authenticate">Sign In</router-link>
   </nav>
 </template>

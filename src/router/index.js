@@ -20,6 +20,10 @@ const routes = [
     name: 'authenticate',
     component: () => import('@/views/AuthenticationView.vue')
   },
+  { path: '/started',
+    name: 'started',
+    component: () => import('@/views/GetStartView.vue')
+  }
 ]
 
 const router = createRouter({
