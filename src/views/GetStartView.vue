@@ -31,6 +31,6 @@ export default {
 
 <style scoped>
 .color{
-  padding-bottom: 5rem;
+  padding-bottom: 7rem;
 }
 </style>

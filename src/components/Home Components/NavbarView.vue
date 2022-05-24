@@ -16,7 +16,7 @@
         
         <li class="nav-item me-1">
           <a class="nav-link" aria-current="page" href="#">	
-           <router-link to="home"
+           <router-link to="/"
                         class="nav-item"
                         exact
                         >
@@ -51,8 +51,7 @@
                         >
                         <button class="btn signIn" type="submit">Sign In</button>
                         </router-link>
-          
-          
+                    
       </div>
     </div>
   </div>
@@ -62,6 +61,7 @@
 </template>
 
 <script>
+
 export default {
   name: 'NavbarView',
   props: {
@@ -71,20 +71,18 @@ export default {
     window.addEventListener("scroll", function() {
       var nav = this.document.querySelector("nav");
       nav.classList.toggle("sticky", this.window.scrollY > 0);
-    })
-  },
-  data() {
+    });
     return {
       open: false,
     };
-  },
+  },  
   methods: {
     click() {
       this.open = !this.open;
     },
     scroll(){
-      this.window = true
-    }
+      this.window = true;
+    },
   },
 }
 

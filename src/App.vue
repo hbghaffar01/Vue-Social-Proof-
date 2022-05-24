@@ -1,14 +1,35 @@
 <template>
-  <router-view/>
+  <router-view v-slot="{ Component,route }">
+      <transition 
+      :enter-active-class="route.meta.enterClass"
+      :leave-active-class="route.meta.leaveClass"
+      mode="out-in">
+        <component :is="Component" />
+      </transition>
+    </router-view>
+
   <nav>
-    <router-link to="/home"></router-link> |
+    <router-link to="/"></router-link>
     <router-link to="/about"></router-link>
     <router-link to="/started"></router-link>
-    <router-link to="/authenticate">Sign In</router-link>
+    <router-link to="/authenticate"></router-link>
   </nav>
 </template>
 
-<style lang="scss">
+<script>
+import 'animate.css';
+
+export default {
+
+  components: {
+    created() {
+      this.$store.dispatch('init_login');
+    }
+  }
+}
+</script>
+
+<style>
 nav{
   color: rgb(0, 0, 0) !important;
   list-style: none;
