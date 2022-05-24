@@ -61,6 +61,7 @@
 </template>
 
 <script>
+import { ref } from 'vue';
 
 export default {
   name: 'NavbarView',
@@ -68,11 +69,13 @@ export default {
     msg: String
   },
   setup() {
+    const sticky = ref(true);
     window.addEventListener("scroll", function() {
       var nav = this.document.querySelector("nav");
       nav.classList.toggle("sticky", this.window.scrollY > 0);
     });
     return {
+      sticky,
       open: false,
     };
   },  

@@ -29,7 +29,8 @@ const routes = [
     component: () => import('@/views/GetStartView.vue'),
     meta: {
       enterClass: "animate__animated animate__fadeInLeft",
-      leaveClass: "animate__animated animate__fadeOutRight"
+      leaveClass: "animate__animated animate__fadeOutRight",
+      auth : false,
     }
   },
   {
@@ -38,19 +39,37 @@ const routes = [
     component: () => import('@/views/AuthenticationView.vue'),
     meta: {
       enterClass: "animate__animated animate__fadeInRight",
-      leaveClass: "animate__animated animate__fadeOutleft"
+      leaveClass: "animate__animated animate__fadeOutleft",
+      auth : false,
     }
   },
   {
     path: '/dashboard',
     name: 'dashboard',
-    component: () => import('@/views/dashBoard.vue')
+    component: () => import('@/views/dashBoard.vue'),
+    meta: {
+      requireAuth : true,
+    }
   },
 ]
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes
+})
+
+router.beforeEach((to, from, next) => {
+  if (to.path === '/login' && auth.currentUser) {
+    next('/')
+    return;
+  }
+
+  if (to.matched.some(record => record.meta.requiresAuth) && !auth.currentUser) {
+    next('/login')
+    return;
+  }
+
+  next();
 })
 
 export default router

@@ -1,12 +1,19 @@
 import { createStore } from 'vuex'
 import { auth, usersCollection } from '@/includes/firebase'
+import router from '@/router/index'
 
 export default createStore({
   state: {
-    
+    user: null
   },
   mutations: {
-    
+    toggleAuth (state, user) {
+      state.user = user
+    },
+
+    CLEAR_USER (state) {
+      state.user = null
+    }
   },
   actions: {
     async register({ commit }, payload) {
@@ -21,13 +28,19 @@ export default createStore({
         email: payload.email,
         password: payload.password,
       });
-      commit('register');
+      commit('toggleAuth', auth.currentUser)
+
+      router.push('/dashboard')
     },
     async login({ commit }, payload) {
       await auth.signInWithEmailAndPassword(
         payload.email, payload.password
         );
-      commit('toggleAuth');
+
+        //redirect to page you want
+        commit('toggleAuth', auth.currentUser)
+
+        router.push('/dashboard')
     },
     init_login({ commit }) {
       // if user logged in 
@@ -36,6 +49,20 @@ export default createStore({
       if (user) {
         commit('toggleAuth');
       }
+    },
+
+    fetchUser ({ commit }) {
+      auth.onAuthStateChanged(async user => {
+        if (user === null) {
+          commit('CLEAR_USER')
+        } else {
+          commit('toggleAuth', user)
+
+          if (router.isReady() && router.currentRoute.value.path === '/authenticate') {
+            router.push('/dashboard')
+          }
+        }
+      })
     }
   },
 });

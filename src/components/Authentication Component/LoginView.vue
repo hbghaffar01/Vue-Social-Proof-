@@ -86,7 +86,7 @@ export default {
       }
       this.login_alert_variant = '';
       this.login_alert_msg = 'Success! You have logged In.';
-      window.location.reload();
+      // window.location.reload();
 
     },
   }

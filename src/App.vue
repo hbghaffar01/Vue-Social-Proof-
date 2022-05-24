@@ -18,6 +18,8 @@
 
 <script>
 import 'animate.css';
+import { onBeforeMount } from 'vue'
+import { useStore } from 'vuex'
 
 export default {
 
@@ -25,6 +27,13 @@ export default {
     created() {
       this.$store.dispatch('init_login');
     }
+  },
+  setup() {
+    const store = useStore()
+
+    onBeforeMount(() => {
+      store.dispatch('fetchUser')
+    })
   }
 }
 </script>
