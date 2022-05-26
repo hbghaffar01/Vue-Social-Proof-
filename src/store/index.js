@@ -1,6 +1,9 @@
 import { createStore } from 'vuex'
 import { auth, usersCollection } from '@/includes/firebase'
 import router from '@/router/index'
+import { 
+  signOut 
+} from 'firebase/auth'
 
 export default createStore({
   state: {
@@ -15,7 +18,10 @@ export default createStore({
       state.user = null
     }
   },
+
+
   actions: {
+    //register
     async register({ commit }, payload) {
       await auth.createUserWithEmailAndPassword(
         payload.email, payload.password,
@@ -32,6 +38,8 @@ export default createStore({
 
       router.push('/dashboard')
     },
+
+    //login
     async login({ commit }, payload) {
       await auth.signInWithEmailAndPassword(
         payload.email, payload.password
@@ -49,6 +57,15 @@ export default createStore({
       if (user) {
         commit('toggleAuth');
       }
+    },
+
+    // logout
+    async logout ({ commit }) {
+      await auth.signOut()
+
+      commit('toggleAuth')
+
+      router.push('/authenticate')
     },
 
     fetchUser ({ commit }) {

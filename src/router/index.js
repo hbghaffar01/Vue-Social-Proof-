@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import { auth } from '@/includes/firebase'
 
 const routes = [
   {
@@ -8,7 +9,7 @@ const routes = [
     component: HomeView,
     meta: {
       enterClass: "animate__animated animate__fadeInLeft",
-      leaveClass: "animate__animated animate__fadeOutRight"
+      leaveClass: "animate__animated animate__fadeOutRight",
     }
   },
   {
@@ -20,7 +21,7 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue'),
     meta: {
       enterClass: "animate__animated animate__fadeInRight",
-      leaveClass: "animate__animated animate__fadeOutleft"
+      leaveClass: "animate__animated animate__fadeOutleft",
     }
   
   },
@@ -30,7 +31,7 @@ const routes = [
     meta: {
       enterClass: "animate__animated animate__fadeInLeft",
       leaveClass: "animate__animated animate__fadeOutRight",
-      auth : false,
+
     }
   },
   {
@@ -40,7 +41,6 @@ const routes = [
     meta: {
       enterClass: "animate__animated animate__fadeInRight",
       leaveClass: "animate__animated animate__fadeOutleft",
-      auth : false,
     }
   },
   {
@@ -48,10 +48,11 @@ const routes = [
     name: 'dashboard',
     component: () => import('@/views/dashBoard.vue'),
     meta: {
-      requireAuth : true,
+      RequireAuth : true,
     }
   },
 ]
+
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
@@ -59,12 +60,22 @@ const router = createRouter({
 })
 
 router.beforeEach((to, from, next) => {
-  if (to.path === '/login' && auth.currentUser) {
-    next('/')
+  if (to.path === '/authenticate' && auth.currentUser) {
+    next('/dashboard')
     return;
   }
 
-  if (to.matched.some(record => record.meta.requiresAuth) && !auth.currentUser) {
+  if (to.path === '/dashboard' && !auth.currentUser) {
+    next('/authenticate')
+    return;
+  }
+
+  if (to.path === '/started' && !auth.currentUser) {
+    next('/authenticate')
+    return;
+  }
+  
+  if (from.matched.some(record => record.meta.requiresAuth) && !auth.currentUser) {
     next('/login')
     return;
   }
