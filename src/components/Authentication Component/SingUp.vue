@@ -233,4 +233,16 @@ form {
 .condition-text p a {
   text-decoration: none;
 }
+
+
+@media screen and (max-width: 600px){
+  .condition-text {
+    padding: 0 0px 0 0px;
+}
+}
+@media screen and (max-width: 426px){
+.condition-text p {
+    color: #fff;
+}
+}
 </style>

@@ -232,4 +232,36 @@ p{
   color: #7A7A7A;
   cursor: pointer;
 }
+
+@media screen and (max-width: 600px){
+  .row {
+    width: 100%;
+    padding: 0px !important;
+  }
+}
+
+@media screen and (max-width: 426px){
+  .image-area {
+    display: none !important;
+}
+.form-area{
+  content: '';
+  background-image: url(@/assets/rectangle.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+}
+
+.SignIn-text p {
+    color: #fff;
+}
+.list ul li {
+    color: #fff;
+}
+}
+@media screen and (max-width: 321px){
+  .header h6 {
+        margin-left: -1.5rem;
+}
+}
 </style>
