@@ -11,9 +11,6 @@
 <script>
 import { onBeforeMount } from 'vue'
 import { useStore } from 'vuex'
-import { onBeforeRouteLeave, onBeforeRouteUpdate } from 'vue-router'
-
-
 export default {
   setup() {
     const store = useStore()
@@ -21,9 +18,6 @@ export default {
     onBeforeMount(() => {
       store.dispatch('fetchUser')
     })
-
-    
-
   }
 }
 </script>

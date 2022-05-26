@@ -42,14 +42,15 @@
                         class="nav-item"
                         exact
                         >
-                        <button class="btn started" type="submit">Get Started</button>
+                        <button class="btn started" type="submit" v-if="auth.currentUser">Get Started</button>
                         </router-link>        
         
           <router-link to="authenticate"
                         class="nav-item"
                         exact
                         >
-                        <button class="btn signIn" type="submit">Sign In</button>
+                        <button class="btn signIn" type="submit" v-if="!auth.currentUser">Sign In</button>
+                        <button class="btn signIn" type="submit" v-else>Dashboard <i class="fa-solid fa-arrow-right" style="font-size: 12px;"></i> </button>
                         </router-link>
                     
       </div>
@@ -62,6 +63,7 @@
 
 <script>
 import { ref } from 'vue';
+import { auth } from '@/includes/firebase'
 
 export default {
   name: 'NavbarView',
@@ -75,6 +77,7 @@ export default {
       nav.classList.toggle("sticky", this.window.scrollY > 0);
     });
     return {
+      auth,
       sticky,
       open: false,
     };
@@ -120,7 +123,7 @@ export default {
     }
     a {
       text-decoration: none;
-      padding: 25px 20px 20px 20px;
+      padding: 25px 20px 20px 0px;
       color: #010000;
       &:hover {
       opacity: .75;

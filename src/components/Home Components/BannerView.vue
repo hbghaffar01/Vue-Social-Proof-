@@ -15,7 +15,8 @@
                         class="nav-item"
                         exact
                         >
-                        <button class="btn freeProfile" type="submit">Create A Free Profile</button>
+                        <button class="btn freeProfile" type="submit" v-if="!auth.currentUser">Create A Free Profile</button>
+                        <button class="btn freeProfile" type="submit" v-else>Manage Your Account</button>
                         </router-link>
           
           </div>
@@ -33,10 +34,14 @@
 
 <script>
 import AOS from 'aos'
+import { auth } from '@/includes/firebase'
 
 export default {
      setup() {
          AOS.init();
+         return{
+             auth
+         }
      }
 }
 </script>

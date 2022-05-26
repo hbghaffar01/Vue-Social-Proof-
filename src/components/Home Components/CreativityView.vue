@@ -15,7 +15,8 @@
                         class="nav-item"
                         exact
                         >
-                        <a href="#">Sounds Good, I Want to Join</a>
+                        <a href="#" v-if="!auth.currentUser">Sounds Good, I Want to Join</a>
+                        <a href="#" v-else>See what you Got!</a>
                         </router-link>
                       
                   </div>
@@ -31,11 +32,15 @@
 
 <script>
 import AOS from 'aos'
+import { auth } from '@/includes/firebase'
 
 
 export default {
     setup() {
          AOS.init();
+         return{
+             auth
+         }
      }
 }
 </script>

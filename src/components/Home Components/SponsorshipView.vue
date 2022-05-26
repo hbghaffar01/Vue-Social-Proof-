@@ -19,7 +19,8 @@
                         class="nav-item"
                         exact
                         >
-                        <a href="#">Sign Up Now For Free</a>
+                        <a href="#" v-if="!auth.currentUser">Sign Up Now For Free</a>
+                        <a href="#" v-else>See Opportunities</a>
                         </router-link>
                       
                   </div>
@@ -57,11 +58,15 @@
 
 <script>
 import AOS from 'aos'
+import { auth } from '@/includes/firebase'
 
 
 export default {
     setup() {
          AOS.init();
+         return{
+         auth,
+     }
      }
 }
 </script>

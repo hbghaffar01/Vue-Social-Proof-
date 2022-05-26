@@ -19,7 +19,8 @@
                         class="nav-item"
                         exact
                         >
-                        <a href="#">Create an Account and Start Earning</a>
+                        <a href="#" v-if="!auth.currentUser">Create an Account and Start Earning</a>
+                        <a href="#" v-else>Ready To Earn? </a>
                         </router-link>
                       
                   </div>
@@ -31,11 +32,15 @@
 
 <script>
 import AOS from 'aos'
+import { auth } from '@/includes/firebase'
 
 
 export default {
     setup() {
          AOS.init();
+         return{
+             auth
+         }
      }
 }
 </script>
