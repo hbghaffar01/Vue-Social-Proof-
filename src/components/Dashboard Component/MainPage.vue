@@ -178,6 +178,7 @@ export default {
     width: 100px;
     background: #2BA8F5;
     color: #fff;
+    box-shadow: none !important;
 }
 .uploader-img button:hover{
     opacity: .9;
