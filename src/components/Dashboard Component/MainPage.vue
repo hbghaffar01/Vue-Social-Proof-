@@ -1,7 +1,7 @@
 <template>
-<GoBack />
   <div class="conatiner">
-    <div class="col-11 dashboard-section-1">
+	<GoBack />
+    <div class="col-lg-11 dashboard-section-1">
       <div class="notify">
         <img src="@/assets/disney.png" alt="" />
         <div>
@@ -14,7 +14,7 @@
       </div>
     </div>
 
-    <div class="col-11 dashboard-section-2">
+    <div class="col-lg-11 col-md-10 col-sm-8 dashboard-section-2">
       <div class="row space">
         <div class="col-7 deals">
           <div class="deal-text">
@@ -66,6 +66,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.continer{
+	overflow-x: hidden !important;
+	overflow-y: hidden !important;
+	box-sizing: border-box;
+}
 .dashboard-section-1 {
 	box-shadow: 0px 4px 24px rgb(0 0 0 / 10%);
 	padding: 0 0 0 36px;
@@ -203,5 +208,82 @@ export default {
 		width: 100px;
 	}
 }
-
+@media screen and (max-width: 768px){
+	.uploader-img {
+		padding: 0 !important;
+	}
+	.go-back{
+		margin-top: .5rem;
+	}
+	.dashboard-section-1{
+		width: 83%;
+	}
+}
+@media screen and (max-width: 426px){
+	.notify img {
+		width: 35px;
+		height: 35px;
+		position: relative;
+		top: 16px;
+	}
+	.notify h5{
+		font-size:	8px;
+		p{
+			font-size: 8px;
+    		margin-left: 5px;
+		}
+	}
+	.post-verify{
+		margin-top: -1rem;
+		margin-left: 0;
+	}
+	.go-back{
+		margin-right: -1rem;
+	}
+	.deals{
+		height: 300px;
+	}
+	.deal-text-heading{
+		padding: 0 !important;
+		p{
+			font-size: 8px;
+		}
+	}
+	.deal-text-status{
+		p{
+			font-size: 8px;
+		}
+	}
+	.uploader-img{
+		margin-top: 3rem;
+	}
+	.activity{
+		height: 300px;
+		.activity-text{
+			margin: 0 !important;
+			display: inherit;
+		}
+		.activityl-text-heading{
+			h5{
+				margin-top: 0;
+				font-size: 10px;
+			}
+			p{
+				margin-top: -4px;
+    			font-size: 8px;
+			}
+		}
+		.activity-text-status{
+			p{
+				margin-top: -4px;
+    			font-size: 8px;
+			}
+		}
+	}
+	.folder-img{
+		img{
+			width: 50px;
+		}
+	}
+}
 </style>
