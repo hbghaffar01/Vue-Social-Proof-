@@ -51,6 +51,30 @@ const routes = [
       RequireAuth : true,
     }
   },
+  {
+    path: '/analytic',
+    name: 'analytic',
+    component: () => import('@/components/Dashboard Component/analyticView.vue'),
+    meta: {
+      RequireAuth : true,
+    }
+  },
+  {
+    path: '/friend',
+    name: 'friend',
+    component: () => import('@/components/Dashboard Component/friendView.vue'),
+    meta: {
+      RequireAuth : true,
+    }
+  },
+  {
+    path: '/image',
+    name: 'image',
+    component: () => import('@/components/Dashboard Component/imageView.vue'),
+    meta: {
+      RequireAuth : true,
+    }
+  },
 ]
 
 

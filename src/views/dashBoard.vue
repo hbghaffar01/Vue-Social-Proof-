@@ -1,16 +1,14 @@
 <template>
-  <div>
-      <h1>Welcome to dashborad</h1>
-  </div>
-
-  <nav v-if="$store.state.user">
-    <button @click="$store.dispatch('logout')">Logout</button>
+<nav v-if="$store.state.user">
   </nav>
+  <sideBar />
 </template>
 
 <script>
 import { onBeforeMount } from 'vue'
 import { useStore } from 'vuex'
+import SideBar from '@/components/Dashboard Component/SideBar.vue'
+
 export default {
   setup() {
     const store = useStore()
@@ -18,10 +16,13 @@ export default {
     onBeforeMount(() => {
       store.dispatch('fetchUser')
     })
+  },
+  //components
+  components: {
+    SideBar,
   }
 }
 </script>
 
-<style>
-
+<style scoped>
 </style>
