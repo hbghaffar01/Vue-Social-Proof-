@@ -27,47 +27,44 @@ export default {
 }
 </script>
 
-<style scoped>
-.fade-enter-active,
+<style lang="scss" scoped>
+.fade-enter-active {
+	transition: opacity 0.3s;
+}
 .fade-leave-active {
-  transition: opacity 0.3s;
+	transition: opacity 0.3s;
 }
-
-.fade-enter,
+.fade-enter {
+	opacity: 0;
+}
 .fade-leave-to {
-  opacity: 0;
+	opacity: 0;
 }
-
 .link {
-  display: flex;
-  align-items: center;
-
-  cursor: pointer;
-  position: relative;
-  font-weight: 400;
-  user-select: none;
-
-  margin: 0.3em 0;
-  padding: 0.4em;
-  border-radius: 0.25em;
-  height: 1.5em;
-
-  color: white;
-  text-decoration: none;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	position: relative;
+	font-weight: 400;
+	user-select: none;
+	margin: 0.3em 0;
+	padding: 0.4em;
+	border-radius: 0.25em;
+	height: 1.5em;
+	color: white;
+	text-decoration: none;
+	&:hover {
+		background-color: var(--sidebar-item-hover);
+		color: #000;
+	}
+	.icon {
+		flex-shrink: 0;
+		width: 25px;
+		margin-right: 10px;
+	}
 }
-
-.link:hover {
-  background-color: var(--sidebar-item-hover);
-  color: #000;
-}
-
 .link.active {
-  background-color: var(--sidebar-item-active);
+	background-color: var(--sidebar-item-active);
 }
 
-.link .icon {
-  flex-shrink: 0;
-  width: 25px;
-  margin-right: 10px;
-}
 </style>

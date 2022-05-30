@@ -65,143 +65,143 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss" scoped>
 .dashboard-section-1 {
-  box-shadow: 0px 4px 24px rgb(0 0 0 / 10%);
-  padding: 0 0 0 36px;
-  background: #fff;
-  margin-left: 6rem;
-  margin-top: 5rem;
-  height: 70px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: relative;
+	box-shadow: 0px 4px 24px rgb(0 0 0 / 10%);
+	padding: 0 0 0 36px;
+	background: #fff;
+	margin-left: 6rem;
+	margin-top: 5rem;
+	height: 70px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	position: relative;
 }
 .notify {
-  position: absolute;
-  left: 1rem;
-  display: flex;
-  color: #000b42;
-}
-.notify img {
-  width: 50px;
-  height: 50px;
-  position: relative;
-  top: 17px;
-}
-.notify h5 {
-  font-weight: 600;
-  margin-top: 1rem;
-  margin-left: 5px;
-}
-.notify p {
-  font-size: 12px;
-  margin-left: 5px;
+	position: absolute;
+	left: 1rem;
+	display: flex;
+	color: #000b42;
+	img {
+		width: 50px;
+		height: 50px;
+		position: relative;
+		top: 17px;
+	}
+	h5 {
+		font-weight: 600;
+		margin-top: 1rem;
+		margin-left: 5px;
+	}
+	p {
+		font-size: 12px;
+		margin-left: 5px;
+	}
 }
 .post-verify {
-  position: absolute;
-  right: 0;
-  color: #219653;
-  margin-top: 1rem;
-  margin-right: 1rem;
-  font-size: 14px;
+	position: absolute;
+	right: 0;
+	color: #219653;
+	margin-top: 1rem;
+	margin-right: 1rem;
+	font-size: 14px;
+	p {
+		i {
+			margin-right: 5px;
+		}
+	}
 }
-.post-verify p i {
-  margin-right: 5px;
-}
-
-/* section 2 */
 .dashboard-section-2 {
-  margin-left: 4.5rem;
-  margin-top: 4rem;
-  padding: 0 0 0 36px;
+	margin-left: 4.5rem;
+	margin-top: 4rem;
+	padding: 0 0 0 36px;
 }
 .space {
-  justify-content: space-between;
+	justify-content: space-between;
 }
 .deals {
-  box-shadow: 0px 4px 24px rgb(0 0 0 / 10%);
-  background: #fff;
-  height: 350px;
-  width: 69%;
+	box-shadow: 0px 4px 24px rgb(0 0 0 / 10%);
+	background: #fff;
+	height: 350px;
+	width: 69%;
 }
 .activity {
-  box-shadow: 0px 4px 24px rgb(0 0 0 / 10%);
-  background: #fff;
-  height: 350px;
-  width: 29%;
+	box-shadow: 0px 4px 24px rgb(0 0 0 / 10%);
+	background: #fff;
+	height: 350px;
+	width: 29%;
 }
-
-/* text  */
 .deal-text {
-  display: flex;
-  position: relative;
-  margin-bottom: -1rem;
+	display: flex;
+	position: relative;
+	margin-bottom: -1rem;
 }
 .deal-text-heading {
-  padding: 20px 20px 0px 20px;
+	padding: 20px 20px 0px 20px;
+	h5 {
+		font-size: 16px;
+	}
+	p {
+		font-size: 12px;
+	}
 }
-.deal-text-heading h5 {
-  font-size: 16px;
+.deal-text-status {
+	p {
+		position: absolute;
+		right: 0;
+		padding: 40px 0 0 0;
+		color: #2ba8f5;
+		font-size: 12px;
+		&:hover {
+			opacity: 0.7;
+		}
+	}
 }
-.deal-text-heading p {
-  font-size: 12px;
+.uploader-img {
+	text-align: center;
+	margin-top: 5rem;
+	padding-left: 200px;
+	padding-right: 200px;
+	img {
+		width: 150px;
+		padding-left: 40px;
+	}
+	p {
+		font-size: 10px;
+	}
+	button {
+		width: 100px;
+		background: #2BA8F5;
+		color: #fff;
+		box-shadow: none !important;
+		&:hover {
+			opacity: .9;
+			color: #fff;
+		}
+	}
 }
-.deal-text-status p {
-  position: absolute;
-  right: 0;
+.activity-text {
+	display: flex;
+	justify-content: space-between;
 }
-.deal-text-status p {
-  padding: 40px 0 0 0;
-  color: #2ba8f5;
-  font-size: 12px;
+.activityl-text-heading {
+	h5 {
+		margin-top: 25px;
+	}
 }
-.deal-text-status p:hover {
-  opacity: 0.7;
-}
-/* img  */
-.uploader-img{
-    text-align: center;
-    margin-top: 5rem;
-    padding-left: 200px;
-    padding-right: 200px;
-}
-.uploader-img img{
-    width: 150px;
-    padding-left: 40px;
-}
-.uploader-img p{
-    font-size: 10px;
-}
-.uploader-img button{
-    width: 100px;
-    background: #2BA8F5;
-    color: #fff;
-    box-shadow: none !important;
-}
-.uploader-img button:hover{
-    opacity: .9;
-    color: #fff;
-}
-
-/* activity sec  */
-.activity-text{
-    display: flex;
-    justify-content: space-between;
-}
-.activityl-text-heading h5{
-    margin-top: 25px;
-}
-.activity-text-status p{
-    margin-top: 31px;
-    font-size: 12px;
+.activity-text-status {
+	p {
+		margin-top: 31px;
+		font-size: 12px;
+	}
 }
 .folder-img {
-    text-align: center;
-    margin-top: 6rem;
+	text-align: center;
+	margin-top: 6rem;
+	img {
+		width: 100px;
+	}
 }
-.folder-img img{
-    width: 100px;
-}
+
 </style>

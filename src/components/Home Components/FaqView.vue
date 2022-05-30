@@ -88,127 +88,152 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
 
 /* 10 FAQs */
-.faq-row{
-    padding: 70px 36px 36px 36px;
+.faq-row {
+	padding: 70px 36px 36px 36px;
 }
-.faq_wrapper .faq_subtitle .h2{
-    font-weight: 500;
-    font-size: 42px;
-    line-height: 54px;
-    text-align: center !important;
-    color: #000000;
-    font-family: 'Poppins', sans-serif !important;
+.faq_wrapper {
+	.faq_subtitle {
+		.h2 {
+			font-weight: 500;
+			font-size: 42px;
+			line-height: 54px;
+			text-align: center !important;
+			color: #000000;
+			font-family: 'Poppins', sans-serif !important;
+		}
+	}
+	.accordion-button {
+		&:hover {
+			box-shadow: none;
+		}
+		&:focus {
+			box-shadow: none;
+		}
+		font-weight: 600;
+		font-size: 18px;
+		line-height: 27px;
+		font-weight: 600;
+		border-radius: 0;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 5px;
+		background-color: unset;
+		&::after {
+			content: '\002B';
+			font-family: "Font Awesome 5 Free";
+			font-weight: 800;
+			display: inline-block;
+			background-image: none;
+			background-color: transparent !important;
+			color: #0c63e4 !important;
+			padding-right: 20px;
+		}
+		&:not(.collapsed) {
+			&::after {
+				content: "\2212";
+				font-family: "Font Awesome 5 Free";
+				font-weight: 800;
+				display: inline-block;
+				background-image: none;
+				transform: unset;
+				background-color: transparent !important;
+			}
+		}
+	}
+	.accordion-flush {
+		box-sizing: border-box;
+		display: block;
+		padding: 30px 150px;
+	}
+	.accordion-item {
+		border-top-style: solid;
+		border-bottom-width: 1px;
+		border-bottom-style: solid;
+		border-color: #777777;
+		padding: 5px 5px;
+	}
+	.faq-text {
+		text-align: center;
+		margin-top: 1rem;
+		p {
+			font-size: 20px;
+			line-height: 27px;
+			text-align: center;
+			color: #000000;
+			font-family: 'Poppins', sans-serif !important;
+			&:hover {
+				color: unset !important;
+				opacity: 1;
+			}
+			a {
+				text-decoration: none;
+			}
+		}
+	}
 }
-.faq_wrapper .accordion-button:hover,
-.faq_wrapper .accordion-button:focus{
-    box-shadow: none;
+.accordion-item {
+	.accordion-body {
+		p {
+			font-weight: normal;
+			font-size: 21px;
+			line-height: 30px;
+			color: #545454;
+			font-family: 'Poppins', sans-serif !important;
+		}
+	}
 }
-.faq_wrapper .accordion-flush{
-    box-sizing: border-box;
-    display: block;
-    padding: 30px 150px;
+@media screen and (max-width: 990px) {
+	.faq-row {
+		padding: inherit;
+	}
+	.faq_wrapper {
+		.accordion-flush {
+			padding: inherit;
+		}
+		.faq_subtitle {
+			.h2 {
+				font-size: 30px;
+				line-height: 36px;
+			}
+		}
+	}
+}
+@media screen and (max-width: 768px) {
+	.faq_wrapper {
+		.faq_subtitle {
+			.h2 {
+				font-size: 22px;
+				line-height: 36px;
+			}
+		}
+	}
+}
+@media screen and (max-width: 450px) {
+	.faq_wrapper {
+		.accordion-button {
+			font-size: 14px;
+			line-height: 22px;
+			font-weight: 500;
+		}
+		.faq-text {
+			p {
+				font-size: 16px;
+				line-height: 22px;
+			}
+		}
+	}
+	.accordion-item {
+		.accordion-body {
+			p {
+				font-size: 18px;
+				line-height: 25px;
+			}
+		}
+	}
+}
 
-}
-.faq_wrapper .accordion-item{
-    border-top-style: solid;
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-    border-color: #777777;
-    padding: 5px 5px;
-}
-.faq_wrapper .accordion-button{
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 27px;
-    font-weight: 600;
-    border-radius: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 5px;
-    background-color: unset;
-}
-.accordion-item .accordion-body p{
-    font-weight: normal;
-    font-size: 21px;
-    line-height: 30px;
-    color: #545454;
-    font-family: 'Poppins', sans-serif !important;
-}
-.faq_wrapper .accordion-button::after{
-    content:'\002B';
-    font-family: "Font Awesome 5 Free";
-    font-weight: 800;
-    display: inline-block;
-    background-image: none;
-    background-color: transparent !important;
-    color: #0c63e4 !important;
-    padding-right: 20px;
-}
-.faq_wrapper .accordion-button:not(.collapsed)::after{
-    content:"\2212";
-    font-family: "Font Awesome 5 Free";
-    font-weight: 800;
-    display: inline-block;
-    background-image: none;
-    transform:unset;
-    background-color: transparent !important;
-}
-.faq_wrapper .faq-text{
-    text-align: center;
-    margin-top: 1rem;
-}
-.faq_wrapper .faq-text p{
-    font-size: 20px;
-    line-height: 27px;
-    text-align: center;
-    color: #000000;
-    font-family: 'Poppins', sans-serif !important;
-}
-.faq_wrapper .faq-text p:hover{
-    color: unset !important;
-    opacity: 1;
-}
-.faq_wrapper .faq-text p a{
-    text-decoration: none;
-}
-
-
-@media screen and (max-width: 990px){
-    .faq-row {
-    padding: inherit;
-}
-    .faq_wrapper .accordion-flush {
-    padding: inherit;
-}
-.faq_wrapper .faq_subtitle .h2 {
-    font-size: 30px;
-    line-height: 36px;
-}
-}
-
-@media screen and (max-width: 768px){
-    .faq_wrapper .faq_subtitle .h2 {
-        font-size: 22px;
-        line-height: 36px;
-    }
-}
-@media screen and (max-width: 450px){
-    .faq_wrapper .accordion-button{
-        font-size: 14px;
-        line-height: 22px;
-        font-weight: 500;
-    }
-    .accordion-item .accordion-body p {
-        font-size: 18px;
-        line-height: 25px;
-}
-.faq_wrapper .faq-text p{
-    font-size: 16px;
-    line-height: 22px;
-}
-}
 </style>

@@ -16,26 +16,29 @@ export default {
 }
 </script>
 
-<style>
-.go-back{
-    display: flex;
-    cursor: pointer;
-    float: right;
-    margin-top: 2rem;
-    margin-right: 2rem;
-    background: none;    
+<style lang="scss" scoped>
+.go-back {
+	display: flex;
+	cursor: pointer;
+	float: right;
+	margin-top: 2rem;
+	margin-right: 2rem;
+	background: none;
 }
-li{
-    list-style: none;
-    color: #2BA8F5;
+li {
+	list-style: none;
+	color: #2BA8F5;
+	i {
+		font-size: 12px;
+		position: relative;
+		right: 5px;
+		top: -1px;
+	}
 }
-li i{
-    font-size: 12px;
-    position: relative;
-    right: 5px;
-    top: -1px;
+ul {
+	&:hover {
+		opacity: .7;
+	}
 }
-ul:hover{
-    opacity: .7;
-}
+
 </style>

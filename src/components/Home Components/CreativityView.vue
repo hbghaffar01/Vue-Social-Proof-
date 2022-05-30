@@ -45,72 +45,77 @@ export default {
 }
 </script>
 
-<style>
-.creativity-row{
-    padding-left: 50px;
-}
-.creativity-text{
-    margin-top: 5rem;
-}
-.creativity-h1{
-    font-weight: 600;
-    font-size: 28px;
-    line-height: 42px;
-    color: #332F2E;
-}
-.creativity-para p{
-    margin-top: 1rem;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 23px;
-    letter-spacing: 0.05em;
-    color: black!important;
-    display: inline-block;
-    text-align: left;
-}
-.creativity-button a{
-    margin-top: 0px !important;
-    display: inline-block;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 27px;
-    letter-spacing: 0.02em;
-    color: #3dadf3;
-    text-decoration: none;
-}
-.creativity-button a:hover{
-    color: #0684d2;
-}
-.creativity-banner {
-    background-color: #fff;
-}
-.creative-img img{
-    width: 80%;
-}
-
-
-@media screen and (max-width: 990px){
-    .creativity-row {
-    flex-direction: column-reverse;
+<style lang="scss" scoped>
+.creativity-row {
+	padding-left: 50px;
 }
 .creativity-text {
-    margin-top: 0rem;
-    text-align: center;
+	margin-top: 5rem;
 }
+.creativity-h1 {
+	font-weight: 600;
+	font-size: 28px;
+	line-height: 42px;
+	color: #332F2E;
 }
-@media screen and (max-width: 768px){
-.creativity-row {
-    padding-left: 0px;
+.creativity-para {
+	p {
+		margin-top: 1rem;
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 23px;
+		letter-spacing: 0.05em;
+		color: black !important;
+		display: inline-block;
+		text-align: left;
+	}
 }
-.creativity-img{
-    margin-bottom: 0rem !important;
+.creativity-button {
+	a {
+		margin-top: 0px !important;
+		display: inline-block;
+		font-weight: 600;
+		font-size: 18px;
+		line-height: 27px;
+		letter-spacing: 0.02em;
+		color: #3dadf3;
+		text-decoration: none;
+		&:hover {
+			color: #0684d2;
+		}
+	}
 }
-.creativity-img img{
-    width: 100%;
+.creativity-banner {
+	background-color: #fff;
 }
-.creativity-text{
-    padding-left: 20px;
-    padding-right: 20px;
+.creative-img {
+	img {
+		width: 80%;
+	}
 }
+@media screen and (max-width: 990px) {
+	.creativity-row {
+		flex-direction: column-reverse;
+	}
+	.creativity-text {
+		margin-top: 0rem;
+		text-align: center;
+	}
 }
+@media screen and (max-width: 768px) {
+	.creativity-row {
+		padding-left: 0px;
+	}
+	.creativity-img {
+		margin-bottom: 0rem !important;
+		img {
+			width: 100%;
+		}
+	}
+	.creativity-text {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+
 </style>

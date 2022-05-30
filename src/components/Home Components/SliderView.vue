@@ -85,46 +85,50 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
 #slider {
-  margin: 0 auto;
-  max-width: 100%;
-  margin-top: 0 !important;
-  padding-right: 40px;
-  padding-left: 40px;
-  text-align: center;
-  justify-content: center;
+	margin: 0 auto;
+	max-width: 100%;
+	margin-top: 0 !important;
+	padding-right: 40px;
+	padding-left: 40px;
+	text-align: center;
+	justify-content: center;
 }
 .thumbnails {
-  margin: 0 -5px;
-  width: calc(100% + 10px);
+	margin: 0 -5px;
+	width: calc(100% + 10px);
 }
 .slide--thumbniail {
-  cursor: pointer;
-  height: 100px;
-  padding: 0 5px;
-  transition: opacity 0.3s;
+	cursor: pointer;
+	height: 100px;
+	padding: 0 5px;
+	transition: opacity 0.3s;
+	&:hover {
+		opacity: 0.75;
+	}
 }
-.slide--thumbniail:hover {
-  opacity: 0.75;
+.slide {
+	img {
+		-o-object-fit: cover;
+		object-fit: cover;
+		-o-object-position: center;
+		object-position: center;
+		width: 60%;
+	}
 }
-.slide img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-  width: 60%;
+@media screen and (max-width: 768px) {
+	#slider {
+		padding-right: 30px;
+		padding-left: 30px;
+		margin-bottom: 5rem;
+	}
+	.slide {
+		img {
+			width: 150%;
+			padding-right: 10px;
+		}
+	}
 }
 
-@media screen and (max-width: 768px){
-  #slider{
-    padding-right: 30px;
-    padding-left: 30px;
-    margin-bottom: 5rem;
-  }
-  .slide img{
-    width: 150%;
-    padding-right: 10px;
-  }
-}
 </style>

@@ -116,152 +116,152 @@ export default {
 };
 </script>
 
-<style scoped>
-.authentication-from{
-  display: flex;
-  justify-content: flex-end;
-  background-color:#fff;
-  overflow: hidden !important;
-  scroll-behavior: inherit;
+<style lang="scss" scoped>
+.authentication-from {
+	display: flex;
+	justify-content: flex-end;
+	background-color: #fff;
+	overflow: hidden !important;
+	scroll-behavior: inherit;
 }
-.container{
-  overflow: hidden !important;
-
+.container {
+	overflow: hidden !important;
 }
-.row{
-  width: 100%;
-  padding: 0px 100px 0px 100px;
+.row {
+	width: 100%;
+	padding: 0px 100px 0px 100px;
 }
-.image-area{
-  z-index: 1;
+.image-area {
+	z-index: 1;
 }
-.logo-img img{
-  position: absolute;
-  top: 4rem;
-  margin-left: 2.5rem;
-  width: 7rem;
+.logo-img {
+	img {
+		position: absolute;
+		top: 4rem;
+		margin-left: 2.5rem;
+		width: 7rem;
+	}
 }
-.slider{
-  content: '';
-  background-image: url(@/assets/rectangle.png);
-  max-width: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 577px;
-  z-index: 1;
+.slider {
+	content: '';
+	background-image: url(@/assets/rectangle.png);
+	max-width: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 577px;
+	z-index: 1;
 }
-.heading{
-  padding: 0 40px 0 40px;
-  text-align: center;
-  margin-top: 30rem;
+.heading {
+	padding: 0 40px 0 40px;
+	text-align: center;
+	margin-top: 30rem;
+	p {
+		margin-bottom: 2rem !important;
+	}
 }
-.heading p{
-  margin-bottom: 2rem !important;
-  
+h1 {
+	color: #fff;
+	font-size: 12px;
+	line-height: 13px;
 }
-h1{
-  color: #fff;
-  font-size: 12px;
-  line-height: 13px;
+p {
+	color: #fff;
+	font-size: 10px;
+	line-height: 13px;
 }
-p{
-  color: #fff;
-  font-size: 10px;
-  line-height: 13px;
+.form-area {
+	border: .1px solid rgb(244, 242, 242);
 }
-
-/* from area  */
-.form-area{
-  border: .1px solid rgb(244, 242, 242);
+.header {
+	position: relative;
+	left: 2rem;
+	top: 10px;
+	h6 {
+		font-size: 14px;
+		margin-bottom: 1.7rem;
+		margin-top: 1rem;
+	}
 }
-.header{
-  position: relative;
-  left: 2rem;
-  top: 10px;
-}
-.header h6{
-  font-size: 14px;
-  margin-bottom: 1.7rem;
-  margin-top: 1rem;
-}
-/* transition */
 .fade-enter-active {
-  transition: all 1s ease-out;
+	transition: all 1s ease-out;
 }
-
 .fade-leave-active {
-  transition: 0 cubic-bezier(1, 0.5, 0.8, 1);
+	transition: 0 cubic-bezier(1, 0.5, 0.8, 1);
 }
-
-.fade-enter-from{
-  transform: translateX(-10px);
-  opacity: 0;
+.fade-enter-from {
+	transform: translateX(-10px);
+	opacity: 0;
 }
 .fade-leave-to {
-  transform: translateX(10px);
-  opacity: 0;
+	transform: translateX(10px);
+	opacity: 0;
 }
-/* transition end */
+.SignIn-text {
+	p {
+		font-weight: 400;
+		font-size: 14px;
+		color: rgba(0, 0, 0, 0.37);
+		text-align: center;
+		position: relative;
+		bottom: -10px;
+		a {
+			text-decoration: none;
+		}
+	}
+}
+.list {
+	position: relative;
+	top: 1rem;
+	left: -1rem;
+	ul {
+		text-align: center;
+		display: flex;
+		text-decoration: none;
+		list-style: none;
+		li {
+			flex: auto;
+			font-size: 12px;
+			color: #7A7A7A;
+			cursor: pointer;
+		}
+	}
+}
+@media screen and (max-width: 600px) {
+	.row {
+		width: 100%;
+		padding: 0px !important;
+	}
+}
+@media screen and (max-width: 426px) {
+	.image-area {
+		display: none !important;
+	}
+	.form-area {
+		content: '';
+		background-image: url(@/assets/rectangle.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+		color: #fff;
+	}
+	.SignIn-text {
+		p {
+			color: #fff;
+		}
+	}
+	.list {
+		ul {
+			li {
+				color: #fff;
+			}
+		}
+	}
+}
+@media screen and (max-width: 321px) {
+	.header {
+		h6 {
+			margin-left: -1.5rem;
+		}
+	}
+}
 
-
-.SignIn-text p{
-  font-weight: 400;
-  font-size: 14px;
-  color: rgba(0, 0, 0, 0.37);
-  text-align: center;
-  position: relative;
-  bottom: -10px;
-}
-.SignIn-text p a{
-  text-decoration: none;
-}
-.list{
-  position: relative;
-  top: 1rem;
-  left: -1rem;
-}
-.list ul{
-  text-align: center;
-  display: flex;
-  text-decoration: none;
-  list-style: none;
-}
-.list ul li{
-  flex: auto;
-  font-size: 12px;
-  color: #7A7A7A;
-  cursor: pointer;
-}
-
-@media screen and (max-width: 600px){
-  .row {
-    width: 100%;
-    padding: 0px !important;
-  }
-}
-
-@media screen and (max-width: 426px){
-  .image-area {
-    display: none !important;
-}
-.form-area{
-  content: '';
-  background-image: url(@/assets/rectangle.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: #fff;
-}
-
-.SignIn-text p {
-    color: #fff;
-}
-.list ul li {
-    color: #fff;
-}
-}
-@media screen and (max-width: 321px){
-  .header h6 {
-        margin-left: -1.5rem;
-}
-}
 </style>

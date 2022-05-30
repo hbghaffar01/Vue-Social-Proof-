@@ -71,100 +71,121 @@ export default {
 }
 </script>
 
-<style>
-.sponsor-row{
-    padding-left: 50px;
-    margin-top: 5rem;
+<style lang="scss" scoped>
+.sponsor-row {
+	padding-left: 50px;
+	margin-top: 5rem;
 }
-.sponsor-text{
-    margin-top: 5rem;
+.sponsor-text {
+	margin-top: 5rem;
+	.sponsor-links {
+		justify-content: flex-start;
+		.sponsor-ul {
+			display: flex;
+			padding: 0 !important;
+			li {
+				list-style: none;
+				padding-top: 1rem;
+				margin: 0 10px;
+			}
+		}
+	}
 }
-.sponsor-h1{
-    font-weight: 600;
-    font-size: 28px;
-    line-height: 42px;
-    color: #332F2E;
+.sponsor-h1 {
+	font-weight: 600;
+	font-size: 28px;
+	line-height: 42px;
+	color: #332F2E;
 }
-.sponsor-para p{
-    margin-top: 1rem;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 23px;
-    letter-spacing: 0.05em;
-    color: black!important;
-    display: inline-block;
-    text-align: left;
+.sponsor-para {
+	p {
+		margin-top: 1rem;
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 23px;
+		letter-spacing: 0.05em;
+		color: black !important;
+		display: inline-block;
+		text-align: left;
+	}
 }
-.sponsor-button a{
-    margin-top: 0px !important;
-    display: inline-block;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 27px;
-    letter-spacing: 0.02em;
-    color: #3dadf3;
-    text-decoration: none;
-}
-.sponsor-button a:hover{
-    color: #0684d2;
+.sponsor-button {
+	a {
+		margin-top: 0px !important;
+		display: inline-block;
+		font-weight: 600;
+		font-size: 18px;
+		line-height: 27px;
+		letter-spacing: 0.02em;
+		color: #3dadf3;
+		text-decoration: none;
+		&:hover {
+			color: #0684d2;
+		}
+	}
 }
 .sponsor-banner {
-    background-color: #fff;
+	background-color: #fff;
 }
-.sponsor-img img{
-    margin-top: 0px !important;
-    width: 60%;
+.sponsor-img {
+	img {
+		margin-top: 0px !important;
+		width: 60%;
+	}
+}
+@media screen and (max-width: 990px) {
+	.sponsor-row {
+		text-align: center;
+	}
+	.sponsor-img {
+		img {
+			width: 100%;
+		}
+	}
+	.sponsor-text {
+		margin-top: 0rem;
+		margin-top: 0rem;
+		.sponsor-links {
+			.sponsor-ul {
+				justify-content: center;
+			}
+		}
+	}
+}
+@media screen and (max-width: 768px) {
+	.sponsor-row {
+		padding-left: 0px;
+	}
+	.sponsor-text {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+@media screen and (max-width: 600px) {
+	.sponsor-text {
+		.sponsor-links {
+			ul {
+				li {
+					img {
+						width: 70px;
+					}
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 350px) {
+	.sponsor-text {
+		.sponsor-links {
+			ul {
+				li {
+					img {
+						width: 50px;
+					}
+				}
+			}
+		}
+	}
+}
 
-}
-.sponsor-text .sponsor-links {
-    justify-content: flex-start;
-}
-.sponsor-text .sponsor-links .sponsor-ul {
-    display: flex;
-    padding: 0 !important;
-}
-.sponsor-text .sponsor-links .sponsor-ul li{
-    list-style: none;
-    padding-top: 1rem;
-    margin: 0 10px;
-    
-}
-
-
-@media screen and (max-width: 990px){
-.sponsor-row{
-    text-align: center;
-}
-.sponsor-img img{
-    width: 100%;
-}
-.sponsor-text {
-    margin-top: 0rem;
-}
-.sponsor-text .sponsor-links .sponsor-ul{
-    justify-content: center;
-}
-.sponsor-text {
-    margin-top: 0rem;
-}
-}
-@media screen and (max-width: 768px){
-.sponsor-row {
-    padding-left: 0px;
-}
-.sponsor-text{
-    padding-left: 20px;
-    padding-right: 20px;
-}
-}
-@media screen and (max-width: 600px){
-    .sponsor-text .sponsor-links ul li img{
-        width: 70px;
-    }
-}
-@media screen and (max-width: 350px){
-    .sponsor-text .sponsor-links ul li img{
-        width: 50px;
-    }
-}
 </style>

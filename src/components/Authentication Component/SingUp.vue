@@ -168,81 +168,82 @@ export default {
 };
 </script>
 
-<style scoped>
-.authentication-from {
-  display: flex;
-  justify-content: flex-end;
-  background-color: #fff;
-}
+<style lang="scss" scoped>
 /* from area  */
+.authentication-from {
+	display: flex;
+	justify-content: flex-end;
+	background-color: #fff;
+}
 form {
-  margin: 0rem 2rem 0rem 2rem;
+	margin: 0rem 2rem 0rem 2rem;
 }
 .sucess-msg {
-  width: 100%;
-  height: 40px;
-  background-color: rgb(123, 222, 123);
-  color: #fff;
-  text-align: center;
-  flex-direction: column;
-  display: flex;
-  justify-content: center;
+	width: 100%;
+	height: 40px;
+	background-color: rgb(123, 222, 123);
+	color: #fff;
+	text-align: center;
+	flex-direction: column;
+	display: flex;
+	justify-content: center;
 }
 .form-group {
-  margin-top: 0;
-  width: 100%;
+	margin-top: 0;
+	width: 100%;
+	label {
+		font-size: 14px;
+		margin-bottom: 1px;
+	}
+	input {
+		box-shadow: none !important;
+	}
+	button {
+		width: 100%;
+		background: #2ba8f5;
+		border: 0.5px solid #2ba8f5;
+		border-radius: 4px;
+		font-weight: 600;
+		font-size: 14px;
+		line-height: 21px;
+		color: #ffffff;
+		box-shadow: none !important;
+		margin-top: 5px;
+	}
 }
-.form-group label {
-  font-size: 14px;
-  margin-bottom: 1px;
-}
-.form-group input {
-  box-shadow: none !important;
-}
-.form-group button {
-  width: 100%;
-  background: #2ba8f5;
-  border: 0.5px solid #2ba8f5;
-  border-radius: 4px;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 21px;
-  color: #ffffff;
-  box-shadow: none !important;
-  margin-top: 5px;
-}
-.invalid-feedback{
-  margin-top: 0 !important;
-  font-size: 10px;
+.invalid-feedback {
+	margin-top: 0 !important;
+	font-size: 10px;
 }
 .SignUp-msg {
-  padding-top: .5rem;
-}
-.SignUp-msg h3{
-  font-size: 16px;
+	padding-top: .5rem;
+	h3 {
+		font-size: 16px;
+	}
 }
 .condition-text {
-  padding: 0 60px 0 0px;
+	padding: 0 60px 0 0px;
+	p {
+		color: #000;
+		font-size: 12px;
+		line-height: 16px;
+		color: rgba(0, 0, 0, 0.3);
+		a {
+			text-decoration: none;
+		}
+	}
 }
-.condition-text p {
-  color: #000;
-  font-size: 12px;
-  line-height: 16px;
-  color: rgba(0, 0, 0, 0.3);
+@media screen and (max-width: 600px) {
+	.condition-text {
+		padding: 0 0px 0 0px;
+	}
 }
-.condition-text p a {
-  text-decoration: none;
+@media screen and (max-width: 426px) {
+	.condition-text {
+		p {
+			color: #fff;
+		}
+	}
 }
 
-
-@media screen and (max-width: 600px){
-  .condition-text {
-    padding: 0 0px 0 0px;
-}
-}
-@media screen and (max-width: 426px){
-.condition-text p {
-    color: #fff;
-}
-}
 </style>

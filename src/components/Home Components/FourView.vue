@@ -94,84 +94,91 @@ export default {
 }
 </script>
 
-<style scoped>
-.four-section{
-    background-color: #FAFAFA;
-    padding-top: 100px;
-    padding-bottom: 70px;
+<style lang="scss" scoped>
+.four-section {
+	background-color: #FAFAFA;
+	padding-top: 100px;
+	padding-bottom: 70px;
 }
 .four-row {
-    text-align: center;
+	text-align: center;
+	.four-steps {
+		padding: 36px 36px 36px 36px;
+	}
+	.four-title {
+		text-align: center;
+		h2 {
+			font-weight: 500;
+			font-size: 36px !important;
+			line-height: 54px;
+			color: #000000;
+		}
+	}
 }
-.four-row .four-steps{
-  padding: 36px 36px 36px 36px;
+.four-steps {
+	.steps-row {
+		.steps-details {
+			display: flex;
+			box-sizing: border-box;
+			margin-top: 36px;
+			.step-img {
+				width: auto !important;
+				img {
+					width: 100%;
+					max-width: none;
+					height: 190px;
+				}
+			}
+			.step-text {
+				text-align: center;
+				h3 {
+					margin: 18px 0px 0px 0px;
+					clear: both;
+				}
+				.step-1-heading {
+					color: #3A4CEF;
+				}
+				.step-2-heading {
+					color: #2BA8F5;
+				}
+				.step-3-heading {
+					color: #FC00FF;
+				}
+				.step-4-heading {
+					color: #7024C4;
+				}
+				.step-para {
+					padding: 16px;
+					p {
+						font-size: 20px;
+						line-height: 27px;
+						font-family: 'Poppins', sans-serif;
+					}
+				}
+			}
+		}
+	}
 }
-.four-row .four-title {
-  text-align: center;
-}
-.four-row .four-title h2 {
-    font-weight: 500;
-    font-size: 36px !important;
-    line-height: 54px;
-    color: #000000;
-}
-.four-steps .steps-row .steps-details{
-  display: flex;
-  box-sizing: border-box;
-  margin-top: 36px;
-}
-.four-steps .steps-row .steps-details .step-img{
-    width: auto !important;
-}
-.four-steps .steps-row .steps-details .step-img img{
-    width: 100%;
-    max-width: none;
-    height: 190px;
-}
-.four-steps .steps-row .steps-details .step-text{
-    text-align: center;
-}
-.four-steps .steps-row .steps-details .step-text h3{
-    margin: 18px 0px 0px 0px;
-    clear: both;
-}
-.four-steps .steps-row .steps-details .step-text .step-1-heading{
-    color: #3A4CEF;
-}
-.four-steps .steps-row .steps-details .step-text .step-2-heading{
-    color: #2BA8F5;
-}
-.four-steps .steps-row .steps-details .step-text .step-3-heading{
-    color: #FC00FF;
-}
-.four-steps .steps-row .steps-details .step-text .step-4-heading{
-    color: #7024C4;
-}
-.four-steps .steps-row .steps-details .step-text .step-para{
-    padding: 16px;
-}
-.four-steps .steps-row .steps-details .step-text .step-para p{
-    font-size: 20px;
-    line-height: 27px;
-    font-family: 'Poppins', sans-serif;
+@media screen and (max-width: 768px) {
+	.four-steps {
+		.steps-row {
+			.steps-details {
+				display: table-column;
+			}
+		}
+	}
+	.step-1 {
+		width: 100%;
+	}
+	.step-2 {
+		width: 100%;
+	}
+	.step-3 {
+		width: 100%;
+	}
+	.step-4 {
+		width: 100%;
+	}
 }
 
-
-@media screen and (max-width: 768px){
-  .four-steps .steps-row .steps-details{
-    display: table-column;
-  }
-  .step-1{
-    width: 100%;
-  }
-  .step-2{
-    width: 100%;
-  }
-  .step-3{
-    width: 100%;
-  }
-  .step-4{
-    width: 100%;
-  }
-}
 </style>

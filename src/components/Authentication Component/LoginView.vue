@@ -93,55 +93,55 @@ export default {
 };
 </script>
 
-<style scoped>
-.authentication-from{
-  display: flex;
-  justify-content: flex-end;
-  background-color:#fff;
-}
-.row{
-  width: 100%;
-}
-
+<style lang="scss" scoped>
 /* from area  */
-.form-area{
-  border: .1px solid rgb(244, 242, 242);
+.authentication-from {
+	display: flex;
+	justify-content: flex-end;
+	background-color: #fff;
 }
-form{
-  margin: 7rem 2rem 2rem 2rem;
+.row {
+	width: 100%;
 }
-.sucess-msg{
-  width: 100%;
-  height: 40px;
-  background-color: rgb(123, 222, 123);
-  color: #fff;
-  text-align: center;
-  flex-direction: column;
-  display: flex;
-  justify-content: center;
+.form-area {
+	border: .1px solid rgb(244, 242, 242);
 }
-.form-group{
-  margin-top: 0;
-  width: 100%;
+form {
+	margin: 7rem 2rem 2rem 2rem;
 }
-.form-group label{
-  font-size: 14px;
-  margin-bottom: 1px;
+.sucess-msg {
+	width: 100%;
+	height: 40px;
+	background-color: rgb(123, 222, 123);
+	color: #fff;
+	text-align: center;
+	flex-direction: column;
+	display: flex;
+	justify-content: center;
+}
+.form-group {
+	margin-top: 0;
+	width: 100%;
+	label {
+		font-size: 14px;
+		margin-bottom: 1px;
+	}
+	input {
+		box-shadow: none !important;
+	}
+	button {
+		width: 100%;
+		background: #2BA8F5;
+		border: 0.5px solid #2BA8F5;
+		border-radius: 4px;
+		font-weight: 600;
+		font-size: 14px;
+		line-height: 21px;
+		color: #FFFFFF;
+		box-shadow: none !important;
+		margin-top: 5px;
+		margin-top: 1rem;
+	}
+}
 
-}
-.form-group input{
-  box-shadow: none !important;
-}
-.form-group button{
-  width: 100%;
-  background: #2BA8F5;
-  border: 0.5px solid #2BA8F5;
-  border-radius: 4px;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 21px;color: #FFFFFF;
-  box-shadow: none !important;
-  margin-top: 5px;
-  margin-top: 1rem;
-}
 </style>

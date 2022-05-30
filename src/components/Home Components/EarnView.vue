@@ -45,70 +45,74 @@ export default {
 }
 </script>
 
-<style>
-.earn-row{
-    padding-left: 50px;
+<style lang="scss" scoped>
+.earn-row {
+	padding-left: 50px;
 }
-.earn-text{
-    margin-top: 6rem;
+.earn-text {
+	margin-top: 6rem;
 }
-.earn-h1{
-    font-weight: 600;
-    font-size: 28px;
-    line-height: 42px;
-    color: #332F2E;
+.earn-h1 {
+	font-weight: 600;
+	font-size: 28px;
+	line-height: 42px;
+	color: #332F2E;
 }
-.earn-para p{
-    margin-top: 1rem;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 23px;
-    letter-spacing: 0.05em;
-    color: black!important;
-    display: inline-block;
-    text-align: left;
+.earn-para {
+	p {
+		margin-top: 1rem;
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 23px;
+		letter-spacing: 0.05em;
+		color: black !important;
+		display: inline-block;
+		text-align: left;
+	}
 }
-.earn-button a{
-    margin-top: 0px !important;
-    display: inline-block;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 27px;
-    letter-spacing: 0.02em;
-    color: #3dadf3;
-    text-decoration: none;
-}
-.earn-button a:hover{
-    color: #0684d2;
+.earn-button {
+	a {
+		margin-top: 0px !important;
+		display: inline-block;
+		font-weight: 600;
+		font-size: 18px;
+		line-height: 27px;
+		letter-spacing: 0.02em;
+		color: #3dadf3;
+		text-decoration: none;
+		&:hover {
+			color: #0684d2;
+		}
+	}
 }
 .earn-banner {
-    background-color: #fff;
+	background-color: #fff;
 }
-.earn-img img{
-    width: 80%;
+.earn-img {
+	img {
+		width: 80%;
+	}
+}
+@media screen and (max-width: 990px) {
+	.earn-row {
+		text-align: center;
+	}
+}
+@media screen and (max-width: 768px) {
+	.earn-row {
+		padding-left: 0px;
+	}
+	.earn-img {
+		margin-top: 2rem;
+		img {
+			width: 100%;
+		}
+	}
+	.earn-text {
+		padding-left: 20px;
+		padding-right: 20px;
+		margin-top: 1rem;
+	}
 }
 
-
-@media screen and (max-width: 990px){
-    .earn-row{
-        text-align: center;
-    }
-}
-@media screen and (max-width: 768px){
-    .earn-row {
-    padding-left: 0px;
-}
-.earn-img{
-    margin-top: 2rem;
-}
-.earn-img img{
-    width: 100%;
-}
-.earn-text{
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-top: 1rem;
-
-}
-}
 </style>
