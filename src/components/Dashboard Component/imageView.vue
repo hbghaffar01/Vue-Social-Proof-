@@ -1,8 +1,8 @@
 <template>
   <GoBack />
-  <div>
-      weolcome to Images section
-  </div>
+  <h1>
+      welcome to Images section
+  </h1>
   <sideBar />
 
 </template>
@@ -20,5 +20,7 @@ export default {
 </script>
 
 <style>
-
+h1{
+  text-align: center;
+}
 </style>
