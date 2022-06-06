@@ -75,6 +75,14 @@ const routes = [
       RequireAuth : true,
     }
   },
+  {
+    path: '/upload',
+    name: 'upload',
+    component: () => import('@/components/Dashboard Component/uploadView.vue'),
+    meta: {
+      RequireAuth : true,
+    }
+  }
 ]
 
 
@@ -84,6 +92,7 @@ const router = createRouter({
 })
 
 router.beforeEach((to, from, next) => {
+  document.title = `${ process.env.VUE_APP_TITLE }: ${ to.name }`
   if (to.path === '/authenticate' && auth.currentUser) {
     next('/dashboard')
     return;

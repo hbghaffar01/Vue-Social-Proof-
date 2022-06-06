@@ -15,6 +15,7 @@
     <sidebarLinks to="/analytic" icon="fas fa-chart-bar">Analytics</sidebarLinks>
     <sidebarLinks to="/friend" icon="fas fa-users">Friends</sidebarLinks>
     <sidebarLinks to="/image" icon="fas fa-image">Images</sidebarLinks>
+    <sidebarLinks to="/upload" icon="fas fa-arrow-up">uploaded</sidebarLinks>
     <sidebarLinks to="" icon="fas fa-arrow-right-from-bracket" @click="$store.dispatch('logout')">Logout</sidebarLinks>
 
     <div class="outer-radius">
