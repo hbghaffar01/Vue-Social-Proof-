@@ -4,7 +4,7 @@
   <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container">
     <a class="navbar-brand" href="#">
-      <img src="@/assets/logo2.svg" alt="">
+      <img :src="logo" alt="">
     </a>
     <button class="navbar-toggler click-area" @click="click" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span id="burger" :class="{ open }">
@@ -80,6 +80,7 @@ export default {
       auth,
       sticky,
       open: false,
+      logo: ['https://firebasestorage.googleapis.com/v0/b/soical-proof-vue3.appspot.com/o/logo2.svg?alt=media&token=5980496c-c9f2-4241-b2ea-8f2b353d95d7']
     };
   },  
   methods: {

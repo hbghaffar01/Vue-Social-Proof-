@@ -3,7 +3,7 @@
       <div class="container">
           <div class="row g-0 sponsor-row">
               <div class="sponsor-img col-lg-6 mb-5" data-aos="fade-right" data-aos-duration="1000" data-aos-once="true">
-                  <img src="@/assets/sponsor.svg" alt="">
+                  <img :src="sponsor" alt="">
               </div>
 
               <div class="col-lg-6 sponsor-text mb-5" data-aos="fade-left" data-aos-duration="1000" data-aos-once="true">
@@ -29,22 +29,22 @@
                            <ul class="sponsor-ul">
                                <li>
                                    <a href="#">
-                                       <img src="@/assets/1.svg" alt="">
+                                       <img :src="tiktok" alt="">
                                    </a>
                                </li>
                                <li>
                                    <a href="#">
-                                       <img src="@/assets/2.svg" alt="">
+                                       <img :src="budwiser" alt="">
                                    </a>
                                </li>
                                <li>
                                    <a href="#">
-                                       <img src="@/assets/3.svg" alt="">
+                                       <img :src="sworkit" alt="">
                                    </a>
                                </li>
                                <li>
                                    <a href="#">
-                                       <img src="@/assets/4.svg" alt="">
+                                       <img :src="fashion" alt="">
                                    </a>
                                </li>
                            </ul>
@@ -67,7 +67,16 @@ export default {
          return{
          auth,
      }
-     }
+     },
+	 data() {
+		 return {
+			 sponsor: ['https://firebasestorage.googleapis.com/v0/b/soical-proof-vue3.appspot.com/o/sponsor.svg?alt=media&token=3b4f9d90-3d36-4fe9-9b9c-5e79b8bacb9b'],
+			 tiktok: ['https://firebasestorage.googleapis.com/v0/b/soical-proof-vue3.appspot.com/o/1.svg?alt=media&token=043d4ddf-d90b-4d54-92e0-06bc74c76860'],
+			 budwiser: ['https://firebasestorage.googleapis.com/v0/b/soical-proof-vue3.appspot.com/o/2.svg?alt=media&token=212355ad-1626-46f3-ab53-5816f0291f42'],
+			 sworkit: ['https://firebasestorage.googleapis.com/v0/b/soical-proof-vue3.appspot.com/o/3.svg?alt=media&token=9deb7fe8-ed9e-46ad-bc06-e86a6364ec00'],
+			 fashion: ['https://firebasestorage.googleapis.com/v0/b/soical-proof-vue3.appspot.com/o/4.svg?alt=media&token=5f207fab-1675-4780-bed6-2323b94356a4']
+		 }
+	 }
 }
 </script>
 

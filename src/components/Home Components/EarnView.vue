@@ -3,7 +3,7 @@
       <div class="container">
           <div class="row g-0 earn-row">
               <div class="earn-img col-lg-6" data-aos="fade-right" data-aos-duration="1000" data-aos-once="true">
-                  <img src="@/assets/earn.svg" alt="">
+                  <img :src="earn" alt="">
               </div>
 
               <div class="col-lg-6 earn-text" data-aos="fade-left" data-aos-duration="1000" data-aos-once="true">
@@ -39,7 +39,8 @@ export default {
     setup() {
          AOS.init();
          return{
-             auth
+             auth,
+			 earn: ['https://firebasestorage.googleapis.com/v0/b/soical-proof-vue3.appspot.com/o/earn.svg?alt=media&token=6110eccc-73c7-4fbe-847a-21a0c3864a82']
          }
      }
 }

@@ -102,6 +102,22 @@ router.beforeEach((to, from, next) => {
     next('/authenticate')
     return;
   }
+  if (to.path === '/analytic' && !auth.currentUser) {
+    next('/authenticate')
+    return;
+  }
+  if (to.path === '/friend' && !auth.currentUser) {
+    next('/authenticate')
+    return;
+  }
+  if (to.path === '/image' && !auth.currentUser) {
+    next('/authenticate')
+    return;
+  }
+  if (to.path === '/upload' && !auth.currentUser) {
+    next('/authenticate')
+    return;
+  }
 
   if (to.path === '/started' && !auth.currentUser) {
     next('/authenticate')

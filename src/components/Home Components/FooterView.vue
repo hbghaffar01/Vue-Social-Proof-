@@ -6,7 +6,7 @@
 
         <div class="col-4 navigate-column" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
           <div class="navigate-title">
-            <img src="@/assets/logo2.svg" alt="">
+            <img :src="logo" alt="">
           </div>
           <div class="navigate-text">
             <span>
@@ -15,13 +15,13 @@
             <div class="navigate-img">
               <ul>
                 <li>
-                  <img src="@/assets/fb.svg" alt="fb">
+                  <img :src="fb" alt="fb">
                 </li>
                 <li>
-                  <img src="@/assets/insta.svg" alt="fb">
+                  <img :src="insta" alt="fb">
                 </li>
                 <li>
-                  <img src="@/assets/twitter.svg" alt="fb">
+                  <img :src="twitter" alt="fb">
                 </li>
               </ul>
             </div>
@@ -115,6 +115,12 @@ import AOS from 'aos'
 export default {
     setup() {
          AOS.init();
+         return {
+           logo: ['https://firebasestorage.googleapis.com/v0/b/soical-proof-vue3.appspot.com/o/logo2.svg?alt=media&token=5980496c-c9f2-4241-b2ea-8f2b353d95d7'],
+           fb: ['https://firebasestorage.googleapis.com/v0/b/soical-proof-vue3.appspot.com/o/fb.png?alt=media&token=4a0c2081-075f-48fa-bb54-1ff5764a3035'],
+           insta: ['https://firebasestorage.googleapis.com/v0/b/soical-proof-vue3.appspot.com/o/insta.png?alt=media&token=68f60dc7-4bb6-4628-bbd2-6d31d5484b63'],
+           twitter: ['https://firebasestorage.googleapis.com/v0/b/soical-proof-vue3.appspot.com/o/twitter.png?alt=media&token=7f77a235-cce8-49e5-9ead-cf4588ae9c24'],
+         }
      }
 }
 </script>

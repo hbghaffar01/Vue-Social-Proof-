@@ -23,7 +23,7 @@
               </div>
 
               <div class="creative-img col-lg-6" data-aos="fade-left" data-aos-duration="1000" data-aos-once="true">
-                  <img src="@/assets/creative.svg" alt="">
+                  <img :src="creative" alt="">
               </div>
           </div>
       </div>
@@ -39,7 +39,8 @@ export default {
     setup() {
          AOS.init();
          return{
-             auth
+             auth,
+			 creative: ['https://firebasestorage.googleapis.com/v0/b/soical-proof-vue3.appspot.com/o/creative.svg?alt=media&token=2680a474-27a0-4ba8-87f2-bc347fa37b10']
          }
      }
 }

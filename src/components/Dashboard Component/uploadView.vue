@@ -1,6 +1,6 @@
 <template>
   <GoBack />
-  <h1>welcome to Upload section</h1>
+  <h1>welcome to upload section</h1>
   <sideBar />
 </template>
 

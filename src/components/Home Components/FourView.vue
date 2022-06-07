@@ -13,7 +13,7 @@
 
             <div class="col-3 step-1">
               <div class="step-img">
-                <img src="@/assets/step-1.svg" alt="step-1" />
+                <img :src="step1" alt="step-1" />
               </div>
               <div class="step-text">
                 <div class="step-1-heading">
@@ -30,7 +30,7 @@
 
             <div class="col-3 step-2">
               <div class="step-img">
-                <img src="@/assets/step-2.svg" alt="step-1" />
+                <img :src="step2" alt="step-1" />
               </div>
               <div class="step-text">
                 <div class="step-2-heading">
@@ -46,7 +46,7 @@
 
             <div class="col-3 step-3">
               <div class="step-img">
-                <img src="@/assets/step-3.svg" alt="step-1" />
+                <img :src="step3" alt="step-1" />
               </div>
               <div class="step-text">
                 <div class="step-3-heading">
@@ -62,7 +62,7 @@
 
             <div class="col-3 step-4">
               <div class="step-img">
-                <img src="@/assets/step-4.svg" alt="step-1" />
+                <img :src="step4" alt="step-1" />
               </div>
               <div class="step-text">
                 <div class="step-4-heading">
@@ -90,6 +90,12 @@ import AOS from 'aos'
 export default {
     setup() {
          AOS.init();
+         return {
+           step1: ['https://firebasestorage.googleapis.com/v0/b/soical-proof-vue3.appspot.com/o/step-1.svg?alt=media&token=5f931bfc-713f-43a1-bf29-5002d471f468'],
+           step2: ['https://firebasestorage.googleapis.com/v0/b/soical-proof-vue3.appspot.com/o/step-2.svg?alt=media&token=a70f0268-1b05-4b0e-bd08-323dd8d3a451'],
+           step3: ['https://firebasestorage.googleapis.com/v0/b/soical-proof-vue3.appspot.com/o/step-3.svg?alt=media&token=09bd5f4c-0cd6-43fc-a9ef-34dc001f754e'],
+           step4: ['https://firebasestorage.googleapis.com/v0/b/soical-proof-vue3.appspot.com/o/step-4.svg?alt=media&token=8dd71fdd-5981-40ff-bf98-0979eb6e1dc0']
+         }
      }
 }
 </script>

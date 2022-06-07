@@ -6,7 +6,7 @@
 
                    <div class="worker-text ">
                        <div class="worker-img">
-                           <img src="@/assets/worker.jpg" alt="">
+                           <img :src="worker" alt="">
                        </div>
                        <div class="worker-h1">
                            @Tony Heally
@@ -21,17 +21,17 @@
                            <ul>
                                <li>
                                    <a href="#">
-                                       <img src="@/assets/fb.svg" alt="">
+                                       <img :src="fb" alt="">
                                    </a>
                                </li>
                                <li>
                                    <a href="#">
-                                       <img src="@/assets/insta.svg" alt="">
+                                       <img :src="insta" alt="">
                                    </a>
                                </li>
                                <li>
                                    <a href="#">
-                                       <img src="@/assets/twitter.svg" alt="">
+                                       <img :src="twitter" alt="">
                                    </a>
                                </li>
                            </ul>
@@ -52,6 +52,12 @@ import AOS from 'aos'
 export default {
     setup() {
          AOS.init();
+		 return {
+			 worker: ['https://firebasestorage.googleapis.com/v0/b/soical-proof-vue3.appspot.com/o/worker.jpg?alt=media&token=26fe0e17-6bc1-4ba5-9ee8-50d87ff3860b'],
+			 fb: ['https://firebasestorage.googleapis.com/v0/b/soical-proof-vue3.appspot.com/o/fb.png?alt=media&token=4a0c2081-075f-48fa-bb54-1ff5764a3035'],
+			 insta: ['https://firebasestorage.googleapis.com/v0/b/soical-proof-vue3.appspot.com/o/insta.png?alt=media&token=68f60dc7-4bb6-4628-bbd2-6d31d5484b63'],
+			 twitter: ['https://firebasestorage.googleapis.com/v0/b/soical-proof-vue3.appspot.com/o/twitter.png?alt=media&token=7f77a235-cce8-49e5-9ead-cf4588ae9c24'],
+		 }
      }
 }
 </script>

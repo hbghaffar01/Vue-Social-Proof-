@@ -26,7 +26,7 @@
 
       <div class="col-lg-6 img-section">
           <div class="image-section">
-              <img src="@/assets/banner.svg" alt="human">
+              <img :src="image" alt="human">
           </div>
       </div>
  </section> 
@@ -42,7 +42,12 @@ export default {
          return{
              auth
          }
-     }
+     },
+	 data() {
+		 return {
+			 image: ['https://firebasestorage.googleapis.com/v0/b/soical-proof-vue3.appspot.com/o/banner.svg?alt=media&token=dcd769e5-bb5a-4bd3-9628-65158a165860']
+		 }
+	 }
 }
 </script>
 
