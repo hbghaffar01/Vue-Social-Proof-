@@ -47,11 +47,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.earn-row {
-	padding-left: 50px;
-}
+// .earn-row {
+// 	padding-left: 50px;
+// }
 .earn-text {
-	margin-top: 6rem;
+	margin-top: 8rem;
+	padding-left: 50px;
 }
 .earn-h1 {
 	font-weight: 600;
@@ -91,9 +92,18 @@ export default {
 }
 .earn-img {
 	img {
-		width: 80%;
+		width: 100%;
+		padding-left: 20px;
 	}
 }
+
+@media screen and (max-width: 1024px){
+	.earn-text {
+	margin-top: 5rem;
+	padding-left: 50px;
+}
+}
+
 @media screen and (max-width: 990px) {
 	.earn-row {
 		text-align: center;
@@ -112,7 +122,12 @@ export default {
 	.earn-text {
 		padding-left: 20px;
 		padding-right: 20px;
-		margin-top: 1rem;
+		margin-top: 2rem;
+		.earn-para {
+	p {
+		text-align: center;
+	}
+}
 	}
 }
 

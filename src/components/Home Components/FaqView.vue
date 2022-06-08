@@ -122,6 +122,7 @@ export default {
 		align-items: center;
 		margin-bottom: 5px;
 		background-color: unset;
+		padding: 1rem 0;
 		&::after {
 			content: '\002B';
 			font-family: "Font Awesome 5 Free";
@@ -130,7 +131,7 @@ export default {
 			background-image: none;
 			background-color: transparent !important;
 			color: #0c63e4 !important;
-			padding-right: 20px;
+			// padding-right: 20px;
 		}
 		&:not(.collapsed) {
 			&::after {
@@ -206,19 +207,14 @@ export default {
 	.faq_wrapper {
 		.faq_subtitle {
 			.h2 {
-				font-size: 22px;
-				line-height: 36px;
+				font-size: 20px;
+				line-height: 30px;
 			}
 		}
 	}
 }
 @media screen and (max-width: 450px) {
 	.faq_wrapper {
-		.accordion-button {
-			font-size: 14px;
-			line-height: 22px;
-			font-weight: 500;
-		}
 		.faq-text {
 			p {
 				font-size: 16px;

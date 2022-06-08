@@ -64,8 +64,8 @@ export default {
 
 <style lang="scss" scoped>
 .worker-row {
-	padding-left: 70px;
-	padding-right: 70px;
+	padding-left: 25px;
+	padding-right: 25px;
 }
 .worker-section {
 	background-color: #fff;
@@ -165,8 +165,8 @@ export default {
 }
 @media screen and (max-width: 768px) {
 	.worker-row {
-		padding-left: 20px;
-		padding-right: 20px;
+		padding-left: 70px;
+		padding-right: 70px;
 	}
 	.worker-area {
 		padding: 0 0 0 0px;
@@ -174,8 +174,8 @@ export default {
 	.worker-text {
 		.worker-para {
 			p {
-				font-size: 20px;
-				line-height: 26px;
+				font-size: 19px;
+				line-height: 27px;
 			}
 		}
 		.worker-h1 {
@@ -187,14 +187,30 @@ export default {
 }
 @media screen and (max-width: 500px) {
 	.worker-row {
-		padding-left: 40px;
-		padding-right: 40px;
+		padding-left: 70px;
+		padding-right: 70px;
+
+		.worker-text{
+			padding: 60px 20px;
+			.worker-para {
+			p {
+				font-size: 18px;
+				line-height: 20px;
+			}
+		}
+		}
+		.worker-text::before{
+			content: "";
+			position: absolute;
+			left: 1.5rem;
+			margin-top: -8rem;
+		}
 	}
 }
 @media screen and (max-width: 376px) {
 	.worker-row {
-		padding-left: 30px;
-		padding-right: 30px;
+		padding-left: 50px;
+		padding-right: 50px;
 	}
 	.worker-text {
 		.worker-para {

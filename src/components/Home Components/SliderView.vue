@@ -36,8 +36,8 @@ export default {
         centerMode: true,
         dots: false,
         navButtons: false,
-        slidesToShow: 2,
-        autoplaySpeed: 3000,
+        slidesToShow: 1,
+        autoplaySpeed: 2500,
         changeDelay: 500,
         pauseOnHover: false,
         responsive: [
@@ -114,21 +114,50 @@ export default {
 		object-fit: cover;
 		-o-object-position: center;
 		object-position: center;
-		width: 60%;
+		width: 100%;
 	}
 }
 @media screen and (max-width: 768px) {
 	#slider {
 		padding-right: 30px;
 		padding-left: 30px;
-		margin-bottom: 5rem;
 	}
 	.slide {
 		img {
-			width: 150%;
+			width: 100%;
 			padding-right: 10px;
 		}
 	}
 }
-
+@media screen and (max-width: 600px){
+  .slide--thumbniail {
+	cursor: pointer;
+	height: 200px;
+	padding: 0 5px;
+	transition: opacity 0.3s;
+	&:hover {
+		opacity: 0.75;
+	}
+}
+}
+@media screen and (max-width: 430px){
+  #slider {
+			margin-bottom: 0rem;
+}
+.slide {
+		img {
+			width: 50%;
+			padding-right: 10px;
+		}
+	}
+.slide--thumbniail {
+	cursor: pointer;
+	height: 150px;
+	padding: 0 5px;
+	transition: opacity 0.3s;
+	&:hover {
+		opacity: 0.75;
+	}
+}
+}
 </style>

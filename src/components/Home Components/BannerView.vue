@@ -136,23 +136,25 @@ export default {
 	}
 }
 @media screen and (max-width: 990px) {
+	.banner-section{
 	.image-section {
-		img {
-			bottom: -25rem !important;
+			display: none;
+	}
+	.text-section{
+		text-align: center;
 		}
 	}
 }
 @media screen and (max-width: 768px) {
 	.banner-section {
-		height: 650px;
-		height: 490px;
+		height: 570px;
 		width: 100%;
 	}
 	.image-section {
 		display: none;
 	}
 	.banner-row {
-		padding-left: 40px !important;
+		padding-left: 0px !important;
 		&::before {
 			content: '';
 			background-image: url(@/assets/banner.svg);
@@ -163,10 +165,12 @@ export default {
 			bottom: 0px;
 			left: 0px;
 			opacity: 0.2;
+			height: 100%;
 		}
 	}
 	.text-section {
 		margin-top: 5rem;
+		padding: 30px;
 	}
 	.content {
 		h2 {
@@ -177,5 +181,23 @@ export default {
 	.banner-button {
 		margin-top: 1rem;
 	}
+}
+@media screen and (max-width: 428px){
+	.banner-section{
+		.text-section{
+		text-align: center;
+		}
+	}
+	.banner-row{
+		.content {
+		h2 {
+			font-size: 20px;
+		}
+		p{
+			font-size: 16px;
+			line-height: 20px;
+		}
+	}
+}
 }
 </style>

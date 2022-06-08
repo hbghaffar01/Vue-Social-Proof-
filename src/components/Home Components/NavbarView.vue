@@ -42,7 +42,7 @@
                         class="nav-item"
                         exact
                         >
-                        <button class="btn started" type="submit" v-if="auth.currentUser">Get Started</button>
+                        <button class="btn started" type="submit">Get Started</button>
                         </router-link>        
         
           <router-link to="authenticate"
@@ -79,10 +79,14 @@ export default {
     return {
       auth,
       sticky,
-      open: false,
       logo: ['https://firebasestorage.googleapis.com/v0/b/soical-proof-vue3.appspot.com/o/logo2.svg?alt=media&token=5980496c-c9f2-4241-b2ea-8f2b353d95d7']
     };
-  },  
+  },
+  data() {
+    return{
+      open: false,
+    }
+  },
   methods: {
     click() {
       this.open = !this.open;
@@ -99,6 +103,9 @@ export default {
 <style scoped lang="scss">
 .header {
   background-color: transparent !important;
+  .container{
+    padding: 0px 30px;
+  }
   .sticky{
     // background-color: rgba(245, 239, 239, 0.445);
     background: #fff;
@@ -172,7 +179,7 @@ button {
   .header nav a{
     text-decoration: none;
     font-weight: 100;
-    padding: 25px 20px 20px 20px;
+    padding: 20px 20px 20px 20px;
   }
 
 }
@@ -187,7 +194,6 @@ button {
   }
   .show{
     background-color: #fff;
-    padding-bottom: 2rem;
     transition: .2s ease-in-out;
   }
 
@@ -199,7 +205,7 @@ button {
     border-radius: 0 !important;
     color: #fff !important;
     box-shadow: none;
-    margin-right: 2rem;
+    margin-right: 3rem;
 }
   .navbar-light .navbar-toggler {
       color: unset;
@@ -221,9 +227,9 @@ ul{
   padding-left: 2.5rem;
 }
 .get-start .started{
-  padding: 40px;
-  margin-right: 3rem;
-  font-size: 100;
+  padding: 30px;
+  margin-right: 3.5rem;
+  font-weight: 100;
 }
 
 
@@ -310,9 +316,6 @@ button {
     text-decoration: none;
     font-weight: 100;
     padding: 13px 0;
-  }
-  button{
-    margin: -30px 10px 20px 10px;
   }
   .get-start{
     

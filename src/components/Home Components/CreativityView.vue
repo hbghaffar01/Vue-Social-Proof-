@@ -47,11 +47,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.creativity-row {
-	padding-left: 50px;
-}
+// .creativity-row {
+// 	padding-left: 50px;
+// }
 .creativity-text {
-	margin-top: 5rem;
+	margin-top: 8rem;
 }
 .creativity-h1 {
 	font-weight: 600;
@@ -90,10 +90,18 @@ export default {
 	background-color: #fff;
 }
 .creative-img {
+	padding-left: 50px;
 	img {
 		width: 80%;
 	}
 }
+
+@media screen and (max-width: 1024px){
+	.creativity-text {
+		margin-top: 4rem !important;
+	}
+}
+
 @media screen and (max-width: 990px) {
 	.creativity-row {
 		flex-direction: column-reverse;
@@ -107,8 +115,9 @@ export default {
 	.creativity-row {
 		padding-left: 0px;
 	}
-	.creativity-img {
+	.creative-img {
 		margin-bottom: 0rem !important;
+		padding-left: 0px !important;
 		img {
 			width: 100%;
 		}
@@ -116,6 +125,12 @@ export default {
 	.creativity-text {
 		padding-left: 20px;
 		padding-right: 20px;
+		margin-top: 2rem !important;
+		.creativity-para {
+			p {
+				text-align: center;
+			}
+		}
 	}
 }
 

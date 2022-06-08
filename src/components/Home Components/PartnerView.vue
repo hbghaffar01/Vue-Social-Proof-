@@ -94,6 +94,14 @@ export default {
 					line-height: 40px;
 				}
 			}
+			.partner-btn {
+			.button {
+				margin-top: 3rem;
+				a {
+					padding: 16px 10px 16px 10px !important;
+				}
+			}
+		}
 		}
 	}
 }

@@ -82,8 +82,8 @@ export default {
 
 <style lang="scss" scoped>
 .sponsor-row {
-	padding-left: 50px;
-	margin-top: 5rem;
+	// padding-left: 50px;
+	margin-top: 10rem;
 }
 .sponsor-text {
 	margin-top: 5rem;
@@ -142,6 +142,13 @@ export default {
 		width: 60%;
 	}
 }
+
+@media screen and (max-width: 1024px){
+	.sponsor-text{
+		margin-top: 2rem;
+	}
+}
+
 @media screen and (max-width: 990px) {
 	.sponsor-row {
 		text-align: center;
@@ -185,6 +192,11 @@ export default {
 }
 @media screen and (max-width: 350px) {
 	.sponsor-text {
+		.sponsor-para {
+			p {
+				text-align: center;
+			}
+		}
 		.sponsor-links {
 			ul {
 				li {
