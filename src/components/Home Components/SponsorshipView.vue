@@ -193,6 +193,11 @@ export default {
 		}
 	}
 }
+@media screen and (max-width: 450px){
+	.sponsor-row{
+		margin-top: 4rem;
+	}
+}
 @media screen and (max-width: 350px) {
 	.sponsor-text {
 		.sponsor-para {
