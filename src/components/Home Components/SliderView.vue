@@ -126,6 +126,7 @@ export default {
 		img {
 			width: 100%;
 			padding-right: 10px;
+      background-size: contain;
 		}
 	}
 }
@@ -139,6 +140,13 @@ export default {
 		opacity: 0.75;
 	}
 }
+.slide {
+		img {
+			width: 50%;
+			padding-right: 10px;
+      background-size: contain;
+		}
+	}
 }
 @media screen and (max-width: 430px){
   #slider {

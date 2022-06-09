@@ -59,6 +59,7 @@ export default {
 	font-size: 28px;
 	line-height: 42px;
 	color: #332F2E;
+	text-align: left;
 }
 .earn-para {
 	p {
@@ -69,7 +70,6 @@ export default {
 		letter-spacing: 0.05em;
 		color: black !important;
 		display: inline-block;
-		text-align: left;
 	}
 }
 .earn-button {
@@ -107,6 +107,9 @@ export default {
 @media screen and (max-width: 990px) {
 	.earn-row {
 		text-align: center;
+		.earn-h1 {
+		text-align: inherit;
+	}
 	}
 }
 @media screen and (max-width: 768px) {

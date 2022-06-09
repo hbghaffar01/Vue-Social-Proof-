@@ -142,6 +142,7 @@ export default {
 	}
 	.text-section{
 		text-align: center;
+		padding: 50px;
 		}
 	}
 }
@@ -191,7 +192,7 @@ export default {
 	.banner-row{
 		.content {
 		h2 {
-			font-size: 20px;
+			font-size: 18px;
 		}
 		p{
 			font-size: 16px;

@@ -105,6 +105,7 @@ export default {
 	font-size: 28px;
 	line-height: 42px;
 	color: #332F2E;
+	text-align: left;
 }
 .sponsor-para {
 	p {
@@ -115,7 +116,6 @@ export default {
 		letter-spacing: 0.05em;
 		color: black !important;
 		display: inline-block;
-		text-align: left;
 	}
 }
 .sponsor-button {
@@ -166,6 +166,9 @@ export default {
 				justify-content: center;
 			}
 		}
+	}
+	.sponsor-h1 {
+		text-align: inherit;
 	}
 }
 @media screen and (max-width: 768px) {

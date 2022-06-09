@@ -58,6 +58,7 @@ export default {
 	font-size: 28px;
 	line-height: 42px;
 	color: #332F2E;
+	text-align: left;
 }
 .creativity-para {
 	p {
@@ -68,7 +69,6 @@ export default {
 		letter-spacing: 0.05em;
 		color: black !important;
 		display: inline-block;
-		text-align: left;
 	}
 }
 .creativity-button {
@@ -109,6 +109,9 @@ export default {
 	.creativity-text {
 		margin-top: 0rem;
 		text-align: center;
+		.creativity-h1 {
+		text-align: inherit;
+	}
 	}
 }
 @media screen and (max-width: 768px) {
