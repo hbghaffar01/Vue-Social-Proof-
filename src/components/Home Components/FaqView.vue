@@ -215,6 +215,11 @@ export default {
 }
 @media screen and (max-width: 450px) {
 	.faq_wrapper {
+		.accordion-button {
+			font-size: 16px;
+			padding-right: 2px;
+		}
+		.accordion-button
 		.faq-text {
 			p {
 				font-size: 16px;

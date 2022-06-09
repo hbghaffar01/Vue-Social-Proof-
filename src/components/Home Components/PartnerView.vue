@@ -90,7 +90,7 @@ export default {
 			padding-bottom: 60px;
 			.partner-text {
 				h2 {
-					font-size: 30px !important;
+					font-size: 20px !important;
 					line-height: 40px;
 				}
 			}
